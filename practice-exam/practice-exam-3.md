@@ -16,40 +16,40 @@ layout: exam
     </details>
 
 2. Which AWS service can be used to store and reliably deliver messages across distributed systems?
-    - A. Amazon Simple Queue Service.
-    - B. AWS Storage Gateway.
+    - A. Amazon Simple Queue Service. [enables decoupling and reliable communication between distributed application components]
+    - B. AWS Storage Gateway. [connects on-premises environments with cloud storage]
     - C. Amazon Simple Email Service.
-    - D. Amazon Simple Storage Service.
+    - D. Amazon Simple Storage Service. [S3]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A
     </details>
 
 3. Which of the following describes the payment model that AWS makes available for customers that can commit to using Amazon EC2 over a one or 3-year term to reduce their total computing costs?
-    - A. Pay less as AWS grows.
-    - B. Pay as you go.
-    - C. Pay less by using more.
-    - D. Save when you reserve.
+    - A. Pay less as AWS grows. [aws reducing prices by improving infrastrucutre]
+    - B. Pay as you go. [standard on demand instance model]
+    - C. Pay less by using more. [volume based discounts ]
+    - D. Save when you reserve. [ reserved instance model for ec2]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: D
     </details>
 
 4. A company is migrating its on-premises database to Amazon RDS. What should the company do to ensure Amazon RDS costs are kept to a minimum?
-    - A. Right-size before and after migration.
-    - B. Use a Multi-Region Active-Passive architecture.
-    - C. Combine On-demand Capacity Reservations with Saving Plans.
-    - D. Use a Multi-Region Active-Active architecture.
+    - A. Right-size before and after migration. [ensures that you dont over provision]
+    - B. Use a Multi-Region Active-Passive architecture. [improve diaster and avaialability but increase cost due to replication]
+    - C. Combine On-demand Capacity Reservations with Saving Plans.[applies to ec2 cost optimization]
+    - D. Use a Multi-Region Active-Active architecture.[active-active region is more expensive than active-passive]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A
     </details>
 
 5. What is the primary storage service used by Amazon RDS database instances?
-    - A. Amazon Glacier.
+    - A. Amazon Glacier. [glacier is for archival storage]
     - B. Amazon EBS.
-    - C. Amazon EFS.
-    - D. Amazon S3.
+    - C. Amazon EFS. [shared file system for ec2]
+    - D. Amazon S3.[backup storage to s3 but not primary]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B
@@ -57,7 +57,7 @@ layout: exam
 
 6. A company is developing a new application using a microservices framework. The new application is having performance and latency issues. Which AWS Service should be used to troubleshoot these issues?
     - A. AWS CodePipeline.
-    - B. AWS X-Ray.
+    - B. AWS X-Ray. [analyze and debug distributed applications, including microservices]
     - C. Amazon Inspector.
     - D. AWS CloudTrail.
 
@@ -69,7 +69,7 @@ layout: exam
     - A. Amazon Redshift.
     - B. AWS Snowball.
     - C. Amazon Simple Storage Service.
-    - D. Amazon EBS.
+    - D. Amazon EBS. [ebs are tied to single AZ while snapshorts are stored in s3(multi-zone)]
     - E. Amazon DynamoDB.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -79,9 +79,9 @@ layout: exam
 8. What are the Amazon RDS features that can be used to improve the availability of your database? (Choose TWO)
     - A. AWS Regions.
     - B. Multi-AZ Deployment.
-    - C. Automatic patching.
+    - C. Automatic patching.[improves security]
     - D. Read Replicas.
-    - E. Edge Locations.
+    - E. Edge Locations.[part of CDN]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B, D
@@ -100,7 +100,7 @@ layout: exam
 10. An organization runs many systems and uses many AWS products. Which of the following services enables them to control how each developer interacts with these products?
     - A. AWS Identity and Access Management.
     - B. Amazon RDS.
-    - C. Network Access Control Lists.
+    - C. Network Access Control Lists. [control inbound/outbound traffic at subnet Level]
     - D. Amazon EMR.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -118,9 +118,9 @@ layout: exam
     </details>
 
 12. Which of the below is a best-practice when building applications on AWS?
-    - A. Strengthen physical security by applying the principle of least privilege.
-    - B. Ensure that the application runs on hardware from trusted vendors.
-    - C. Use IAM policies to maintain performance.
+    - A. Strengthen physical security by applying the principle of least privilege.[applies to IAM. physical security is AWS]
+    - B. Ensure that the application runs on hardware from trusted vendors.[ AWS manages hardware]
+    - C. Use IAM policies to maintain performance. [iam is for permissions]
     - D. Decouple the components of the application so that they run independently.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -141,8 +141,8 @@ layout: exam
     - A. Active archives.
     - B. Dynamic websites’ assets.
     - C. Long-term analytic data.
-    - D. Active databases.
-    - E. Cached data.
+    - D. Active databases. [database require low latency]
+    - E. Cached data. [need fast access glacier retireval is slow]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A, C
@@ -159,7 +159,7 @@ layout: exam
     </details>
 
 16. What is the AWS service that performs automated network assessments of Amazon EC2 instances to check for vulnerabilities?
-    - A. Amazon Kinesis.
+    - A. Amazon Kinesis. [real time streaming data]
     - B. Security groups.
     - C. Amazon Inspector.
     - D. AWS Network Access Control Lists.
@@ -169,31 +169,31 @@ layout: exam
     </details>
 
 17. Under the Shared Responsibility Model, which of the following controls do customers fully inherit from AWS? (Choose TWO)
-    - A. Patch management controls.
-    - B. Database controls.
-    - C. Awareness & Training.
-    - D. Environmental controls.
-    - E. Physical controls.
+    - A. Patch management controls. [customer doesnt fully inherit patch management]
+    - B. Database controls.[not fully inherited for rds also schmea and data is our responsibility]
+    - C. Awareness & Training.[customer responsibility]
+    - D. Environmental controls.[inherit]
+    - E. Physical controls. [inherit]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: D, E
     </details>
 
 18. A company needs to host a database in Amazon RDS for at least three years. Which of the following options would be the most cost-effective solution?
-    - A. Reserved instances     - No Upfront.
+    - A. Reserved instances     - No Upfront. [ get discount but not as compared to Partial and All Upfront]
     - B. Reserved instances     - Partial Upfront.
     - C. On-Demand instances.
-    - D. Spot Instances.
+    - D. Spot Instances.[not reliable for databases]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B
     </details>
 
 19. Your application has recently experienced significant global growth, and international users are complaining of high latency. What is the AWS characteristic that can help improve your international users’ experience?
-    - A. Elasticity.
+    - A. Elasticity.[scailing resources up and down]
     - B. Global reach.
-    - C. Data durability.
-    - D. High availability.
+    - C. Data durability. [data isnt lost]
+    - D. High availability. [ensures uptime and resillence ]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B
@@ -201,8 +201,8 @@ layout: exam
 
 20. Savings Plans are available for which of the following AWS compute services? (Choose TWO)
     - A. AWS Batch.
-    - B. AWS Outposts.
-    - C. Amazon Lightsail.
+    - B. AWS Outposts. [hybrid infrastructure. savings not for hardware]
+    - C. Amazon Lightsail. [own pricing model for vps service]
     - D. Amazon EC2.
     - E. AWS Lambda.
 
@@ -212,9 +212,9 @@ layout: exam
 
 21. A company has business critical workloads hosted on AWS and they are unwilling to accept any downtime. Which of the following is a recommended best practice to protect their workloads in the event of an unexpected natural disaster?
     - A. Replicate data across multiple Edge Locations worldwide and use Amazon CloudFront to perform automatic failover in the event of an outage.
-    - B. Deploy AWS resources across multiple Availability Zones within the same AWS Region.
+    - B. Deploy AWS resources across multiple Availability Zones within the same AWS Region. [Multi AZ can improve availability in same region but if the whole region goes down, there would be downtime]
     - C. Create point-in-time backups in another subnet and recover this data when a disaster occurs.
-    - D. Deploy AWS resources to another AWS Region and implement an Active-Active disaster recovery strategy.
+    - D. Deploy AWS resources to another AWS Region and implement an Active-Active disaster recovery strategy. [Active-Active across multiple regions ensures workloads are running simultaneously in different geographic locations.if one region down traffica can move towards another region]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: D
@@ -222,10 +222,10 @@ layout: exam
 
 22. Which statement is correct with regards to AWS service limits? (Choose TWO)
     - A. You can contact AWS support to increase the service limits.
-    - B. Each IAM user has the same service limit.
-    - C. There are no service limits on AWS.
+    - B. Each IAM user has the same service limit. [Limits are applied at the account level, not per IAM user]
+    - C. There are no service limits on AWS. [aws enforces quotas to prevent accidental overuse]
     - D. You can use the AWS Trusted Advisor to monitor your service limits.
-    - E. The Amazon Simple Email Service is responsible for sending email notifications when usage approaches a service limit.
+    - E. The Amazon Simple Email Service is responsible for sending email notifications when usage approaches a service limit.[notification come via trusted advisor or cloudwatch]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A, D
@@ -233,8 +233,8 @@ layout: exam
 
 23. What is the AWS tool that enables you to use scripts to manage all AWS services and resources?
     - A. AWS Console.
-    - B. AWS Service Catalog.
-    - C. AWS OpsWorks.
+    - B. AWS Service Catalog. [lets you manage approved AWS resources for governance]
+    - C. AWS OpsWorks. [chef/puppet]
     - D. AWS CLI.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -263,20 +263,20 @@ layout: exam
     </details>
 
 26. Which of the following AWS offerings is a MySQL-compatible relational database service that can scale capacity automatically based on demand?
-    - A. Amazon Neptune.
+    - A. Amazon Neptune.[graph based database service]
     - B. Amazon Aurora.
-    - C. Amazon RDS for SQL Server.
-    - D. Amazon RDS for PostgreSQL.
+    - C. Amazon RDS for SQL Server. [not MySQL-compatible and doesn’t have the same auto-scaling features as Aurora]
+    - D. Amazon RDS for PostgreSQL.[not MySQL-compatible and doesn’t have the same auto-scaling features as Aurora]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B
     </details>
 
 27. Which of the following can help protect your EC2 instances from DDoS attacks? (Choose TWO)
-    - A. AWS CloudHSM.
+    - A. AWS CloudHSM. [hardware-based key management for encryption.]
     - B. Security Groups.
-    - C. AWS Batch.
-    - D. AWS IAM.
+    - C. AWS Batch[compute for running batch jobs]
+    - D. AWS IAM.[create user access and permission doesnt protect network level attacks]
     - E. Network Access Control Lists (Network ACLs).
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -293,7 +293,7 @@ layout: exam
       Correct answer: A
     </details>
 
-29. Which of the following should be considered when performing a TCO analysis to compare the costs of running an application on AWS instead of on-premises?
+29. Which of the following should be considered when performing a TCO [Total Cost of Ownerhsip] analysis to compare the costs of running an application on AWS instead of on-premises?
     - A. Application development.
     - B. Market research.
     - C. Business analysis.
@@ -305,7 +305,7 @@ layout: exam
 
 30. How are AWS customers billed for Linux-based Amazon EC2 usage?
     - A. EC2 instances will be billed on one second increments, with a minimum of one minute.
-    - B. EC2 instances will be billed on one hour increments, with a minimum of one day.
+    - B. EC2 instances will be billed on one hour increments, with a minimum of one day. [old model]
     - C. EC2 instances will be billed on one minute increments, with a minimum of one hour.
     - D. EC2 instances will be billed on one day increments, with a minimum of one month.
 
@@ -313,7 +313,7 @@ layout: exam
       Correct answer: A
     </details>
 
-31. Which of the following will impact the price paid for an EC2 instance? (Choose TWO)
+31. Which of the following will impact the price paid for an EC2 instance? (Choose TWO) [Check]
     - A. Instance type.
     - B. The Availability Zone where the instance is provisioned.
     - C. Load balancing.
@@ -325,10 +325,10 @@ layout: exam
     </details>
 
 32. A customer spent a lot of time configuring a newly deployed Amazon EC2 instance. After the workload increases, the customer decides to provision another EC2 instance with an identical configuration. How can the customer achieve this?
-    - A. By creating an AWS Config template from the old instance and launching a new instance from it.
-    - B. By creating an EBS Snapshot of the old instance.
+    - A. By creating an AWS Config template from the old instance and launching a new instance from it.[AWS config is compilance and configuration monitoring]
+    - B. By creating an EBS Snapshot of the old instance.[snapshort for volume]
     - C. By installing Aurora on EC2 and launching a new instance from it.
-    - D. By creating an AMI from the old instance and launching a new instance from it.
+    - D. By creating an AMI from the old instance and launching a new instance from it.[AMI captures full configuration of isntance]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: D
@@ -337,7 +337,7 @@ layout: exam
 33. A company uses AWS Organizations to manage all of its AWS accounts. Which of the following allows the company to restrict what services and actions are allowed in each individual account?
     - A. IAM Principals.
     - B. AWS Service Control Policies (SCPs).
-    - C. IAM policies.
+    - C. IAM policies. [for single account]
     - D. AWS Fargate.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -345,41 +345,41 @@ layout: exam
     </details>
 
 34. Which of the following statements describes the AWS Cloud’s agility?
-    - A. AWS allows you to host your applications in multiple regions around the world.
-    - B. AWS provides customizable hardware at the lowest possible cost.
+    - A. AWS allows you to host your applications in multiple regions around the world.[global reach not agility]
+    - B. AWS provides customizable hardware at the lowest possible cost.[cost effectivness not agility]
     - C. AWS allows you to provision resources in minutes.
-    - D. AWS allows you to pay upfront to reduce costs.
+    - D. AWS allows you to pay upfront to reduce costs.[pricing model not agility]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: C
     </details>
 
 35. What are the benefits of using the Amazon Relational Database Service? (Choose TWO)
-    - A. Lower administrative burden.
+    - A. Lower administrative burden. [RDS automates tasks like backups, patching, monitoring, and replication]
     - B. Complete control over the underlying host.
     - C. Resizable compute capacity.
-    - D. Scales automatically to larger or smaller instance types.
-    - E. Supports the document and key-value data structure.
+    - D. Scales automatically to larger or smaller instance types.[cant automatically change instance type manually modify instance class]
+    - E. Supports the document and key-value data structure.[dynamo db]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A, C
     </details>
 
 36. What is the connectivity option that uses Internet Protocol Security (IPSec) to establish encrypted connectivity between an on-premises network and the AWS Cloud?
-    - A. Internet Gateway.
-    - B. AWS IQ.
-    - C. AWS Direct Connect.
-    - D. AWS Site-to-Site VPN.
+    - A. Internet Gateway. [vpc to internet]
+    - B. AWS IQ. [connect customers to aws experts]
+    - C. AWS Direct Connect.[provides a dedicated connection not encrypted by default and doesnt use ipsec]
+    - D. AWS Site-to-Site VPN. [establishes an encrypted tunnel using ipsec]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: D
     </details>
 
 37. What is the minimum level of AWS support that provides 24x7 access to technical support engineers via phone and chat?
-    - A. Enterprise Support.
-    - B. Developer Support.
-    - C. Basic Support.
-    - D. Business Support.
+    - A. Enterprise Support. (supports 24*7 but highest tier)
+    - B. Developer Support.(business hours only)
+    - C. Basic Support.(free tier, includes only customer service, documentation, and forums)
+    - D. Business Support.(supports 24*7, minimum level tier)
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: D
@@ -410,7 +410,7 @@ layout: exam
     - A. AWS Service Health Dashboard.
     - B. AWS Management Console.
     - C. Amazon CloudWatch.
-    - D. AWS Personal Health Dashboard.
+    - D. AWS Personal Health Dashboard. [service events that specifically impact your account’s resources not overall across regions)
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A
@@ -438,10 +438,10 @@ layout: exam
 
 43. App development companies move their business to AWS to reduce time-to-market and improve customer satisfaction, what are the AWS automation tools that help them deploy their applications faster? (Choose TWO)
     - A. AWS CloudFormation.
-    - B. AWS Migration Hub.
+    - B. AWS Migration Hub.[tracks migrations across AWS services.]
     - C. AWS IAM.
     - D. AWS Elastic Beanstalk.
-    - E. Amazon Macie.
+    - E. Amazon Macie. [security service for data classification and protection]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A, D
@@ -459,9 +459,9 @@ layout: exam
 
 45. A company has hundreds of VPCs in multiple AWS Regions worldwide. What service does AWS offer to simplify the connection management among the VPCs?
     - A. VPC Peering.
-    - B. AWS Transit Gateway.
+    - B. AWS Transit Gateway. [Transit Gateway acts as a central hub to connect multiple VPCs and on-premises networks]
     - C. Amazon Connect.
-    - D. Security Groups.
+    - D. Security Groups.[control instance level traffic]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B
@@ -471,7 +471,7 @@ layout: exam
     - A. Instances can be shut down by AWS at any time with no notification.
     - B. Reserved instances require at least a one-year pricing commitment.
     - C. There is no additional charge for using dedicated instances.
-    - D. Reserved instances provide a significant discount compared to on-demand instances.
+    - D. Reserved instances provide a significant discount compared to on-demand instances. [75% compared to on demand]
     - E. Reserved instances are best suited for periodic workloads.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -499,7 +499,7 @@ layout: exam
     </details>
 
 49. Which of the following is a benefit of running an application in multiple Availability Zones?
-    - A. Allows you to exceed AWS service limits.
+    - A. Allows you to exceed AWS service limits. (service limit are at account level not az deployment]
     - B. Reduces application response time between servers and global users.
     - C. Increases available compute capacity.
     - D. Increases the availability of your application.
@@ -510,7 +510,7 @@ layout: exam
 
 50. Data security is one of the top priorities of AWS. How does AWS deal with old storage devices that have reached the end of their useful life?
     - A. AWS sells the old devices to other hosting providers.
-    - B. AWS destroys the old devices in accordance with industry-standard practices.
+    - B. AWS destroys the old devices in accordance with industry-standard practices. (destroys the old devices following NIST Guidelines)
     - C. AWS sends the old devices for remanufacturing.
     - D. AWS stores the old devices in a secure place.
 
