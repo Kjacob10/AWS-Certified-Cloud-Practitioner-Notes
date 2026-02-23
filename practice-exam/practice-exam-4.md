@@ -12,26 +12,26 @@ layout: exam
     - E. AWS Data Pipeline.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
-      Correct answer: A, B
+      Correct answer: B, D
     </details>
 
 2. Which of the following AWS services scale automatically without your intervention? (Choose TWO)
-    - A. Amazon EC2.
-    - B. Amazon S3.
-    - C. AWS Lambda.
-    - D. Amazon EMR.
-    - E. Amazon EBS.
+    - A. Amazon EC2.(need to configure to ASG]
+    - B. Amazon S3. [scales automatically]
+    - C. AWS Lambda.[scales automatically based on incoming request]
+    - D. Amazon EMR.[must configure auto scaling policies]
+    - E. Amazon EBS. [fixed in size unless manually resize them]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B, C
     </details>
 
 3. A company is planning to migrate an application from Amazon EC2 to AWS Lambda to use a serverless architecture. Which of the following will be the responsibility of AWS after migration? (Choose TWO)
-    - A. Application management.
-    - B. Capacity management.
-    - C. Access control.
+    - A. Application management. [application, logic and code developer ]
+    - B. Capacity management.[scales capacity up/down based on incoming requests]
+    - C. Access control.[customer responsibility]
     - D. Operating system maintenance.
-    - E. Data management.
+    - E. Data management.[customer responsibility]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B, D
@@ -108,11 +108,11 @@ layout: exam
     </details>
 
 11. What are the benefits of using an AWS-managed service? (Choose TWO)
-    - A. Provides complete control over the virtual infrastructure.
+    - A. Provides complete control over the virtual infrastructure.(managed service remove infrastructure control)
     - B. Allows customers to deliver new solutions faster.
     - C. Lowers operational complexity.
-    - D. Eliminates the need to encrypt data.
-    - E. Allows developers to control all patching related activities.
+    - D. Eliminates the need to encrypt data. [encryption is still required)
+    - E. Allows developers to control all patching related activities.(aws control patching)
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B, C
@@ -120,10 +120,10 @@ layout: exam
 
 12. Which of the following are use cases for Amazon S3? (Choose TWO)
     - A. Hosting static websites.
-    - B. Hosting websites that require sustained high CPU utilization.
-    - C. Cost-effective database and log storage.
+    - B. Hosting websites that require sustained high CPU utilization. (require compute like ec2)
+    - C. Cost-effective database and log storage.(s3 insnt database)
     - D. A media store for the CloudFront service.
-    - E. Processing data streams at any scale.
+    - E. Processing data streams at any scale. (amazon kinesis)
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A, D
@@ -160,9 +160,9 @@ layout: exam
     </details>
 
 16. A company is planning to migrate a database with high read/write activity to AWS. What is the best storage option to use?
-    - A. AWS Storage Gateway.
+    - A. AWS Storage Gateway. [Storage Gateway is used to connect on-premises environments with AWS storage services]
     - B. Amazon S3.
-    - C. Amazon EBS.
+    - C. Amazon EBS. [designed for high-performance transactional workloads like databases, offering low-latency and high IOPS]
     - D. Amazon Glacier.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -170,16 +170,16 @@ layout: exam
     </details>
 
 17. How can AWS customers track and avoid over-spending on underutilized reserved instances?
-    - A. Customers can add all AWS accounts to an AWS Organization, enable Consolidated Billing, and turn off Reserved Instance sharing.
-    - B. Customers can use Amazon Neptune to track and analyze their usage patterns, detect underutilized reserved instances, and then sell them on the Amazon EC2 Reserved Instance Marketplace.
+    - A. Customers can add all AWS accounts to an AWS Organization, enable Consolidated Billing, and turn off Reserved Instance sharing.(turning of RI would reduce efficency)
+    - B. Customers can use Amazon Neptune to track and analyze their usage patterns, detect underutilized reserved instances, and then sell them on the Amazon EC2 Reserved Instance Marketplace.[neptune is graph database service]
     - C. Customers can use the AWS Budgets service to track the reserved instances usage and set up alert notifications when their utilization drops below the threshold that they define.
-    - D. Customers can use Amazon CloudTrail to automatically check for unused reservations and get recommendations to reduce their bill.
+    - D. Customers can use Amazon CloudTrail to automatically check for unused reservations and get recommendations to reduce their bill. [cloudtrail records API Calls]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: C
     </details>
 
-18. What is the AWS service that provides five times the performance of a standard MySQL database?
+18. What is the AWS service that provides five times the performance of a standard MySQL database? (and 3 times faster postgres sql)
     - A. Amazon Aurora.
     - B. Amazon Redshift.
     - C. Amazon DynamoDB.
@@ -190,10 +190,10 @@ layout: exam
     </details>
 
 19. What does AWS Service Catalog provide?
-    - A. It enables customers to quickly find descriptions and use cases for AWS services.
+    - A. It enables customers to quickly find descriptions and use cases for AWS services.[aws marketplacr or documnetation]
     - B. It enables customers to explore the different catalogs of AWS services.
-    - C. It simplifies organizing and governing commonly deployed IT services.
-    - D. It allows developers to deploy infrastructure on AWS using familiar programming languages.
+    - C. It simplifies organizing and governing commonly deployed IT services.[/or managing your organization approved resources]
+    - D. It allows developers to deploy infrastructure on AWS using familiar programming languages. [AWS CloudFormation or the CDK]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: C
@@ -213,8 +213,8 @@ layout: exam
 21. Which of the following AWS Services helps with planning application migration to the AWS Cloud?
     - A. AWS Snowball Migration Service.
     - B. AWS Application Discovery Service.
-    - C. AWS DMS.
-    - D. AWS Migration Hub.
+    - C. AWS DMS. [DMS is used to migrate databases]
+    - D. AWS Migration Hub. [Migration Hub provides a central place to track progress of application migrations]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B
@@ -222,8 +222,8 @@ layout: exam
 
 22. A company is trying to analyze the costs applied to their AWS account recently. Which of the following provides them the most granular data about their AWS costs and usage?
     - A. Amazon Machine Image.
-    - B. AWS Cost Explorer.
-    - C. AWS Cost & Usage Report.
+    - B. AWS Cost Explorer. [provides visualizations and trends of your spending but not specific]
+    - C. AWS Cost & Usage Report. [more detailed]
     - D. Amazon CloudWatch.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -253,8 +253,8 @@ layout: exam
 25. Which of the following are factors in determining the appropriate database technology to use for a specific workload? (Choose TWO)
     - A. Availability Zones.
     - B. Data sovereignty.
-    - C. The number of reads and writes per second.
-    - D. The nature of the queries.
+    - C. The number of reads and writes per second. [High read/write → NoSQL databases like DynamoDB,Balanced transactions → Relational databases like RDS]
+    - D. The nature of the queries. [Complex joins & SQL → Relational database, Simple key-value lookups → NoSQL,Analytics queries → Data warehouse]
     - E. Software bugs.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -367,10 +367,10 @@ layout: exam
     </details>
 
 36. TYMO Cloud Corp is looking forward to migrating their entire on-premises data center to AWS. What tool can they use to perform a cost-benefit analysis of moving to the AWS Cloud?
-    - A. AWS Cost Explorer.
-    - B. AWS TCO Calculator.
+    - A. AWS Cost Explorer.[more of current planning]
+    - B. AWS TCO Calculator.[total cost of ownership calculator helps estimate the cost savings of moving workloads from on-premises to AWS]
     - C. AWS Budgets.
-    - D. AWS Pricing Calculator.
+    - D. AWS Pricing Calculator. [estimates costs of specific AWS services, but it doesn’t provide a full cost-benefit analysis compared to on-premises environments. ]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B
@@ -387,7 +387,7 @@ layout: exam
     </details>
 
 38. Why do many startup companies prefer AWS over traditional on-premises solutions? (Choose TWO)
-    - A. AWS allows them to pay later when their business succeed.
+    - A. AWS allows them to pay later when their business succeed.[pas as you go model]
     - B. AWS can build complete data centers faster than any other Cloud provider.
     - C. Using AWS, they can reduce time-to-market by focusing on business activities rather than on building and managing data centers.
     - D. AWS removes the need to invest in operational expenditure.
@@ -409,9 +409,9 @@ layout: exam
     </details>
 
 40. Which of the following can be used to protect data at rest on Amazon S3? (Choose TWO)
-    - A. Versioning.
+    - A. Versioning.[Keeping multiple versions of objects]
     - B. Deduplication.
-    - C. Permissions.
+    - C. Permissions. [Correct. IAM policies, bucket policies, and ACLs control access to S3 objects,]
     - D. Decryption.
     - E. Conversion.
 
@@ -431,10 +431,10 @@ layout: exam
     </details>
 
 42. AWS recommends some practices to help organizations avoid unexpected charges on their bill. Which of the following is NOT one of these practices?
-    - A. Deleting unused EBS volumes after terminating an EC2instance.
+    - A. Deleting unused EBS volumes after terminating an EC2instance. [deleting unused ones prevents ongoing charges.]
     - B. Deleting unused AutoScaling launch configuration.
-    - C. Deleting unused Elastic Load Balancers.
-    - D. Releasing unused Elastic IPs after terminating an EC2instance.
+    - C. Deleting unused Elastic Load Balancers.[Load balancers incur hourly charges, so unused ones should be deleted to avoid costs.]
+    - D. Releasing unused Elastic IPs after terminating an EC2instance. [Elastic IPs incur charges when not associated with a running instance, so releasing them avoids unnecessary costs.]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B
@@ -513,10 +513,10 @@ layout: exam
     </details>
 
 50. Which AWS Service allows customers to download AWS SOC & PCI reports?
-    - A. AWS Well-Architected Tool.
-    - B. AWS Artifact.
+    - A. AWS Well-Architected Tool.[helps review workloads against best practices]
+    - B. AWS Artifact.[AWS Artifact is the portal for on-demand access to AWS compliance reports and agreements, including SOC, PCI, ISO, and other certifications.]
     - C. AWS Glue.
-    - D. Amazon Chime.
+    - D. Amazon Chime.[Chime is a communication service for meetings and messaging]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B
