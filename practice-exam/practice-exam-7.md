@@ -18,7 +18,7 @@ layout: exam
 2. Which AWS service helps developers compile and test their code?
     - A. AWS CodeDeploy.
     - B. AWS CodeCommit.
-    - C. CloudEndure.
+    - C. CloudEndure.[disaster recovery and migration service,]
     - D. AWS CodeBuild.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -26,11 +26,11 @@ layout: exam
     </details>
 
 3. Which of the following will affect how much you are charged for storing objects in S3? (Choose TWO)
-    - A. Using default encryption for any number of S3 buckets.
+    - A. Using default encryption for any number of S3 buckets.[free for default kms minimal charge]
     - B. The number of EBS volumes attached to your instances.
     - C. The storage class used for the objects stored.
     - D. Creating and deleting S3 buckets.
-    - E. The total size in gigabytes of all objects stored.
+    - E. The total size in gigabytes of all objects stored.[billed for data inside in gb/month even though you have unlimited capacity]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: C, E
@@ -79,7 +79,7 @@ layout: exam
     </details>
 
 8. Which of the following services gives you access to all AWS auditor-issued reports and certifications?
-    - A. AWS Artifact.
+    - A. AWS Artifact. [provides on-demand access to AWS compliance reports and security certifications issued by auditors.]
     - B. AWS Config.
     - C. Amazon CloudWatch.
     - D. AWS CloudTrail.
@@ -89,8 +89,8 @@ layout: exam
     </details>
 
 9. You manage a blog on AWS that has different environments: development, testing, and production. What can you use to create a custom console for each environment to view and manage your resources easily?
-    - A. AWS Resource Groups.
-    - B. AWS Placement Groups.
+    - A. AWS Resource Groups. [AWS Resource Groups let you organize and view AWS resources by applying tags.- correct option]
+    - B. AWS Placement Groups.[influence how EC2 instances are placed on hardware for performance/availability]
     - C. AWS Management Console.
     - D. AWS Tag Editor.
 
@@ -110,7 +110,7 @@ layout: exam
 
 11. Your web application currently faces performance issues and suffers from long load times. Which of the following AWS services could help fix these issues and improve performance?
     - A. Amazon Detective.
-    - B. AWS X-Ray.
+    - B. AWS X-Ray.[end-to-end tracing of requests as they travel through your application, identifying bottlenecks, slow services, and performance problems.][distributed]
     - C. AWS Security Hub.
     - D. AWS Shield.
 
@@ -149,8 +149,8 @@ layout: exam
       Correct answer: B
     </details>
 
-15. An organization needs to build a financial application that requires support for ACID transactions. Which AWS database service is most appropriate in this case?
-    - A. RedShift.
+15. An organization needs to build a financial application that requires support for ACID transactions. Which AWS database service is most appropriate in this case? (Atomicity, Consistency, Isolation, Durability)
+    - A. RedShift.[A data warehouse optimized for analytics, not transactional workloads.]
     - B. RDS.
     - C. CloudHSM.
     - D. DMS.
@@ -171,9 +171,9 @@ layout: exam
 
 17. The owner of an E-Commerce application notices that the compute capacity requirements vary heavily from time to time. What makes AWS more economical than traditional data centers for this type of application?
     - A. AWS allows customers to launch powerful EC2 instances to handle spikes in load.
-    - B. AWS allows customers to pay upfront to get bigger discounts.
+    - B. AWS allows customers to pay upfront to get bigger discounts.[Refers to Reserved Instances/Savings Plans]
     - C. AWS allows customers to launch and terminate EC2 instances based on demand.
-    - D. AWS allows customers to choose cheaper types of EC2 instances that best fit their needs.
+    - D. AWS allows customers to choose cheaper types of EC2 instances that best fit their needs.[help optilize cost but demand will be fluctuating]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: C
@@ -182,8 +182,8 @@ layout: exam
 18. Amazon RDS supports multiple database engines to choose from. Which of the following is not one of them?
     - A. PostgreSQL.
     - B. Oracle.
-    - C. Microsoft SQL Server.
-    - D. Teradata.
+    - C. Microsoft SQL Server. /Aurora/ MariaDB
+    - D. Teradata. [Teradata is a commercial data warehouse and analytics platform.]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: D
@@ -202,8 +202,8 @@ layout: exam
 20. For new AWS customers, what is the EASIEST way to launch a simple WordPress website on AWS?
     - A. Run WordPress on an Amazon Lightsail instance.
     - B. Install WordPress on an Amazon EC2 instance.
-    - C. Use the Amazon S3 Web hosting feature.
-    - D. Host the website directly on AWS Cloud Development Kit (AWS CDK).
+    - C. Use the Amazon S3 Web hosting feature.[s3 can host dynamic but wordpress id dynamic]
+    - D. Host the website directly on AWS Cloud Development Kit (AWS CDK).[not a hosting service]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A
@@ -221,9 +221,9 @@ layout: exam
     </details>
 
 22. Which of the following services allows you to install and run custom relational database software?
-    - A. Amazon EC2.
+    - A. Amazon EC2.[EC2 gives you full control over the operating system and software stack.
     - B. Amazon Cognito.
-    - C. Amazon RDS.
+    - C. Amazon RDS.[Amazon RDS, which only supports specific managed database engines (MySQL, PostgreSQL, Oracle, SQL Server, MariaDB, Aurora)]
     - D. Amazon Inspector.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -242,8 +242,8 @@ layout: exam
 
 24. A company has infrastructure hosted in an on-premises data center. They currently have an operations team that takes care of identity management. If they decide to migrate to the AWS cloud, which of the following services would help them perform the same role in AWS?
     - A. AWS IAM.
-    - B. AWS Outposts.
-    - C. AWS Federation.
+    - B. AWS Outposts.[Extends AWS infrastructure to on-premises environments, but not for identity management]
+    - C. AWS Federation.[ Allows integration with external identity providers (e.g., Active Directory, SAML)]
     - D. Amazon Redshift.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -251,9 +251,9 @@ layout: exam
     </details>
 
 25. What are some key design principles for designing public cloud systems? (Choose TWO)
-    - A. Reserved capacity instead of on demand.
+    - A. Reserved capacity instead of on demand.[Reserved capacity is a pricing model, not a design principle]
     - B. Loose coupling over tight coupling.
-    - C. Servers instead of managed services.
+    - C. Servers instead of managed services.[Cloud best practices encourage using managed services]
     - D. Disposable resources instead of fixed servers.
     - E. Multi-AZ deployments instead of multi-region deployments.
 
@@ -293,11 +293,11 @@ layout: exam
 
 29. For some services, AWS automatically replicates data across multiple Availability Zones to provide fault tolerance in the event of a server failure or Availability Zone outage. Select TWO services that automatically replicate data across Availability Zones.
     - A. Instance Store.
-    - B. S3.
-    - C. DynamoDB.
+    - B. S3.[Replicates data across multiple AZs in a region for durability]
+    - C. DynamoDB.[Multi-AZ replication by default for high availability.]
     - D. Amazon Route 53.
     - E. AWS VPN.
-
+(RDS- maintains synchronous standby replica in another AZ, Aurora- Replicate Six copies of your data acorss three AZ automatically, EFS and Elasticache too replicate data across AZ)
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B, C
     </details>
@@ -317,7 +317,7 @@ layout: exam
     - A. AWS Service Control Policies (SCPs).
     - B. AWS Artifact.
     - C. AWS Budgets.
-    - D. AWS Acceptable Use Policy.
+    - D. AWS Acceptable Use Policy. [AWS Acceptable Use Policy (AUP) outlines the prohibited and restricted uses of AWS services.]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: D
@@ -395,10 +395,10 @@ layout: exam
     </details>
 
 39. You are working as a web app developer. You are currently facing issues in media playback for mobile devices because your media format is not supported. Which of the following AWS services can help you convert your media into another format?
-    - A. Amazon Elastic Transcoder.
-    - B. Amazon Pinpoint.
+    - A. Amazon Elastic Transcoder.[Amazon Elastic Transcoder is a media transcoding service in AWS that allows you to convert media files from one format to another.]
+    - B. Amazon Pinpoint. [Used for targeted user engagement]
     - C. AmazonS3.
-    - D. Amazon Rekognition.
+    - D. Amazon Rekognition.[ Image and video analysis service]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A
@@ -466,11 +466,11 @@ layout: exam
     </details>
 
 46. According to the AWS shared responsibility model, what are the controls that customers fully inherit from AWS? (Choose TWO)
-    - A. Awareness and Training.
-    - B. Communications controls.
+    - A. Awareness and Training.[Customer]
+    - B. Communications controls.[Customer]
     - C. Data center security controls.
     - D. Environmental controls.
-    - E. Resource Configuration Management.
+    - E. Resource Configuration Management.[Customer]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: C, D
@@ -480,7 +480,7 @@ layout: exam
     - A. AWS Billing Dashboard.
     - B. AWS Cost Dashboard.
     - C. AWS Service Health Dashboard.
-    - D. AWS Security Dashboard.
+    - D. AWS Security Dashboard. [no such dashboard]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: C
@@ -498,21 +498,21 @@ layout: exam
     </details>
 
 49. Which of the following are part of the seven design principles for security in the cloud? (Choose TWO)
-    - A. Use manual monitoring techniques to protect your AWS resources.
+    - A. Use manual monitoring techniques to protect your AWS resources.[Cloud best practices emphasize automated monitoring, not manual.]
     - B. Use IAM roles to grant temporary access instead of long-term credentials.
-    - C. Scale horizontally to protect from failures.
+    - C. Scale horizontally to protect from failures.[ reliability principle]
     - D. Enable real-time traceability.
-    - E. Never store sensitive data in the cloud.
+    - E. Never store sensitive data in the cloud.[can be stored with proper encryption]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B, D
     </details>
 
 50. A company is migrating production workloads to AWS, and they are concerned about cost management across different departments. Which option should the company implement to categorize and track AWS spending?
-    - A. Use the AWS Pricing Calculator service to monitor the costs incurred by each department.
+    - A. Use the AWS Pricing Calculator service to monitor the costs incurred by each department.[estimating costs before deployment]
     - B. Use Amazon Aurora to forecast AWS spending based on usage.
-    - C. Apply cost allocation tags to segment AWS costs by different e projects and departments.
-    - D. Configure AWS Price List API to receive billing updates for each department automatically.
+    - C. Apply cost allocation tags to segment AWS costs by different e projects and departments.[ tags then appear in your AWS Cost Explorer ]
+    - D. Configure AWS Price List API to receive billing updates for each department automatically.[Provides pricing information programmatically, but does not categorize or track departmental spending.]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: C
