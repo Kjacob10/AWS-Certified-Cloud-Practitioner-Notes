@@ -6,9 +6,11 @@ layout: exam
 
 1. What is the main benefit of attaching security groups to an Amazon RDS instance?
     - A. Manages user access and encryption keys.
+      [handled by iam or kms]
     - B. Controls what IP address ranges can connect to your database instance.
     - C. Deploys SSL/TLS certificates for use with your database instance.
     - D. Distributes incoming traffic across multiple targets.
+      [thats elb not sg]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B
@@ -17,6 +19,7 @@ layout: exam
 2. A company wants to use Amazon Elastic Container Service (Amazon ECS) to run its containerized applications. For compliance reasons, the company wants to retain complete visibility and control over the underlying server cluster. Which Amazon ECS launch type will satisfy these requirements?
     - A. EC2 launch type.
     - B. Fargate launch type.
+      [WS manages the servers for you. You don’t see or control the underlying infrastructure]
     - C. Lightsail launch type.
     - D. Lambda launch type.
 
@@ -36,9 +39,12 @@ layout: exam
 
 4. You have been tasked with auditing the security of your VPC. As part of this process, you need to start by analyzing what inbound and outbound traffic is allowed on your EC2 instances. What two parts of the VPC do you need to check to accomplish this task?
     - A. Network ACLs and Traffic Manager.
+      [Traffic manager is an Azure Service]
     - B. Network ACLs and Subnets.
+      [Subnet define ip but doent control traffic]
     - C. Security Groups and Internet Gateways.
     - D. Security Groups and Network ACLs.
+      [sg acts are firewall at ec2 level and acl act as firewall at subnet level]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: D
@@ -67,8 +73,10 @@ layout: exam
 
 7. Which statement is true in relation to security in AWS?
     - A. AWS manages everything related to EC2 operating systems.
+      [Customers must patch and secure their own EC2 OS.]
     - B. AWS customers are responsible for patching any database software running on Amazon EC2.
     - C. Server side encryption is the responsibility of AWS.
+      [AWS provides encryption options, but customers must enable and configure them.]
     - D. AWS is responsible for the security of your application.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -78,6 +86,7 @@ layout: exam
 8. Amazon EC2 instances are conceptually very similar to traditional servers. However, using Amazon EC2 server instances in the same manner as traditional hardware server instances is only a starting point. What are the main benefits of using the AWS EC2 instances instead of traditional servers? (Choose TWO)
     - A. Improves Fault-Tolerance.
     - B. Provides your business with a seamless remote accessibility.
+      [Remote access is possible, but it’s not unique to EC2; traditional servers can also be accessed remotely]
     - C. Prevents unauthorized users from getting into your network.
     - D. Provides automatic data backups.
     - E. Can be scaled manually in a shorter period of time.
@@ -181,7 +190,7 @@ layout: exam
     </details>
 
 18. Which database service should you use if your application and data schema require "joins" or complex transactions?
-    - A. Amazon RDS.
+    - A. Amazon RDS. [SQL]
     - B. AWS Outposts.
     - C. Amazon DocumentDB.
     - D. Amazon DynamoDB.
@@ -202,9 +211,12 @@ layout: exam
 
 20. What should you consider when storing data in Amazon Glacier?
     - A. Amazon Glacier only accepts data in a compressed format.
+      [Compression is optional, not required.]
     - B. Glacier can only be used to store frequently accessed data and data archives.
+      [It’s specifically for infrequently accessed data.]
     - C. Amazon Glacier does not provide immediate retrieval of data.
     - D. Attach Glacier to an EC2 Instance to be able to store data.
+      [Glacier is accessed via APIs or S3 lifecycle policies, not directly attached to EC2.]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: C
@@ -243,10 +255,13 @@ layout: exam
 
 24. Which of the following requires an access key ID and a secret access key to get long-lived programmatic access to AWS resources? (Choose TWO)
     - A. IAM group.
+      [group collection of users]
     - B. IAM user.
     - C. IAM role.
+      [roles provide temp cred via sts]
     - D. AWS account root user.
     - E. TAM.
+    - [support role for enterprise]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B, D
@@ -255,7 +270,9 @@ layout: exam
 25. Which of the following is a benefit of the "Loose Coupling" architecture principle?
     - A. It eliminates the need for change management.
     - B. It allows for Cross-Region Replication.
+      [Thats a feature os S3]
     - C. It helps AWS customers reduce Privileged Access to AWS resources.
+      [More of IAM and Security]
     - D. It allows individual application components or services to be modified without affecting other components.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -263,9 +280,10 @@ layout: exam
     </details>
 
 26. A company needs to host a big data application on AWS using EC2 instances. Which of the following AWS Storage services would they choose to automatically get high throughput to multiple compute nodes?
-    - A. Amazon Elastic Block Store.
+    - A. Amazon Elastic Block Store.[attached to single ec2]
     - B. AWS Storage Gateway.
     - C. Amazon Elastic File System.
+      [Ideal for big data, analytics, Multiple EC2 instances can access it concurrently and its fully managed]
     - D. S3.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -305,8 +323,11 @@ layout: exam
 
 30. You are planning to launch an advertising campaign over the coming weekend to promote a new digital product. It is expected that there will be heavy spikes in load during the campaign period, and you can’t afford any downtime. You need additional compute resources to handle the additional load. What is the most cost-effective EC2 instance purchasing option for this job?
     - A. Savings Plans.
+      [Require a 1–3 year commitment ]
     - B. Spot Instances.
+      [Cheapest option, but they can be interrupted at any time if AWS needs capacity.]
     - C. Reserved Instances.
+      [Require a 1–3 year commitment and for steady state workloads predictable]
     - D. On-Demand Instances.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -346,8 +367,10 @@ layout: exam
 
 34. What is the Amazon ElastiCache service used for? (Choose TWO)
     - A. Provide an in-memory data storage service.
+      [Data is stored in memory rather than on disk, which makes retrieval extremely fast.]
     - B. Reduce delivery costs using Edge Locations.
     - C. Improve web application performance.
+      [caching frequently accessed data, ElastiCache reduces database load and speeds up application response times.]
     - D. Provide a Chef-compatible cache to speed up application response.
     - E. Distribute requests to multiple instances.
 
@@ -402,7 +425,9 @@ layout: exam
     - B. Ensure that AWS services are configured properly to meet all PCI DSS standards.
     - C. Restrict any access to cardholder data and create a policy that addresses information security for all personnel.
     - D. Configure the underlying infrastructure of AWS services to meet all PCI DSS requirements.
+      [AWS manages the underlying infrastructure; customers configure services on top of it.]
     - E. Ensure that all PCI DSS physical security requirements are met.
+      [ AWS handles physical security of data centers.]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B, C
@@ -441,7 +466,7 @@ layout: exam
 43. Which of the following steps should be taken by a customer when conducting penetration testing on AWS?
     - A. Conduct penetration testing using Amazon Inspector, and then notify AWS support.
     - B. Request and wait for approval from the customer’s internal security team, and then conduct testing.
-    - C. Notify AWS support, and then conduct testing immediately.
+    - C. Notify AWS support, and then conduct testing immediately.[You must wait for AWS approval before starting.]
     - D. Request and wait for approval from AWS support, and then conduct testing.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -501,8 +526,10 @@ layout: exam
 49. Which is a recommended pattern for designing a highly available architecture on AWS?
     - A. Ensure that components have low-latency network connectivity.
     - B. Run enough Amazon EC2 instances to operate at peak load.
+      [ensures capacity but doesnt gurantee availability]
     - C. Ensure that the application is designed to accommodate failure of any single component.
     - D. Use a monolithic application that handles all operations.
+      [oppoiste monoliths are harder to scale and recover]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: C
@@ -510,10 +537,13 @@ layout: exam
 
 50. Which AWS characteristics make AWS cost effective for a workload with dynamic user demand? (Select TWO)
     - A. High availability.
+      [Improves reliability but doesn’t directly reduce costs.]
     - B. Shared security model.
+      [Defines responsibilities between AWS and customers,not cost optimization]
     - C. Elasticity.
     - D. Pay-as-you-go pricing.
     - E. Reliability.
+      [Ensures resilience, but not a cost-saving mechanism.]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: C, D
