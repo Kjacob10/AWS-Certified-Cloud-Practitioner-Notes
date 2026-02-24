@@ -5,8 +5,8 @@ layout: exam
 # Practice Exam 6
 
 1. Which of the following is true regarding the AWS availability zones and edge locations?
-    - A. Edge locations are located in separate Availability Zones worldwide to serve global customers.
-    - B. An availability zone exists within an edge location to distribute content globally with low latency.
+    - A. Edge locations are located in separate Availability Zones worldwide to serve global customers.[edge location are independent]
+    - B. An availability zone exists within an edge location to distribute content globally with low latency.[az are within region]
     - C. An Availability Zone is a geographic location where AWS provides multiple, physically separated and isolated edge locations.
     - D. An AWS Availability Zone is an isolated location within an AWS Region, however edge locations are located in multiple cities worldwide.
 
@@ -16,10 +16,10 @@ layout: exam
 
 2. Which features are included in the AWS Business Support Plan? (Choose TWO)
     - A. 24x7 access to customer service.
-    - B. Access to Cloud Support Engineers via email only during business hours.
+    - B. Access to Cloud Support Engineers via email only during business hours. [support 24*7]
     - C. Access to the Infrastructure Event Management (IEM) feature for additional fee.
-    - D. 24x7 access to the TAM feature.
-    - E. Partial access to the core Trusted Advisor checks.
+    - D. 24x7 access to the TAM feature. [only enterpirse
+    - E. Partial access to the core Trusted Advisor checks.[full access]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A, C
@@ -49,7 +49,7 @@ layout: exam
     - A. Eliminates the need to monitor servers and applications.
     - B. Manages all the compliance and auditing tasks.
     - C. Provides custom hardware to meet any specification.
-    - D. Eliminates the need to guess on infrastructure capacity needs.
+    - D. Eliminates the need to guess on infrastructure capacity needs.[you can scale resources up or down on demand]
     - E. Enables customers to trade their capital expenses for operational expenses.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -58,19 +58,19 @@ layout: exam
 
 6. A customer is planning to migrate their Microsoft SQL Server databases to AWS. Which AWS Services can the customer use to run their Microsoft SQL Server database on AWS? (Choose TWO)
     - A. AWS Fargate.
-    - B. Amazon Elastic Compute Cloud.
+    - B. Amazon Elastic Compute Cloud.[install and run Microsoft SQL Server directly on EC2 instances. ]
     - C. Amazon RDS.
-    - D. AWS Database Migration service (DMS).
-    - E. AWS Lambda.
+    - D. AWS Database Migration service (DMS). (Helps migrate databases to AWS)
+    - E. AWS Lambda.( A serverless compute service for running code, not databases.)
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B, C
     </details>
 
 7. Which AWS Service can perform health checks on Amazon EC2 instances?
-    - A. AWS CloudFormation.
+    - A. AWS CloudFormation. [Used for infrastructure as code (provisioning resources)]
     - B. Amazon Route 53.
-    - C. Amazon Chime.
+    - C. Amazon Chime.[A communication service (video conferencing, chat]
     - D. Amazon Aurora.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -89,7 +89,7 @@ layout: exam
 
 9. Which of the following are examples of AWS-managed databases? (Choose TWO)
     - A. Amazon Neptune.
-    - B. Amazon CloudSearch.
+    - B. Amazon CloudSearch. [A managed search service, not a database.]
     - C. Microsoft SQL Server on Amazon EC2.
     - D. MySQL on Amazon EC2.
     - E. Amazon RDS for MySQL.
@@ -101,7 +101,7 @@ layout: exam
 10. A company’s AWS workflow requires that it periodically perform large-scale image and video processing jobs. The customer is seeking to minimize cost and has stated that the amount of time it takes to process these jobs is not critical, but that cost minimization is the most important factor in designing the solution. Which EC2 instance class is best suited for this processing?
     - A. EC2 On-Demand Instances.
     - B. EC2 Reserved Instances     - No Upfront.
-    - C. EC2 Spot Instances.
+    - C. EC2 Spot Instances. [EC2 Spot Instances are ideal for workloads that are flexible in timing and can tolerate interruptions. 90 percent lower than on demand]
     - D. EC2 Reserved Instances     - All Upfront.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -120,7 +120,7 @@ layout: exam
 
 12. You need to migrate a large number of on-premises workloads to AWS. Which AWS service is the most appropriate?
     - A. AWS File Transfer Acceleration.
-    - B. AWS Server Migration Service.
+    - B. AWS Server Migration Service. [designed to help customers migrate large numbers of on-premises workloads to AWS.]
     - C. AWS Database Migration Service.
     - D. AWS Application Discovery Service.
 
@@ -150,9 +150,9 @@ layout: exam
     </details>
 
 15. A company is hosting business critical workloads in an AWS Region. To protect against data loss and ensure business continuity, a mirror image of the current AWS environment should be created in another AWS Region. Company policy requires that the standby environment must be available in minutes in case of an outage in the primary AWS Region. Which AWS service can be used to meet these requirements?
-    - A. CloudEndure Disaster Recovery.
+    - A. CloudEndure Disaster Recovery. [CloudEndure Disaster Recovery is designed to provide business continuity and disaster recovery by continuously replicating workloads across AWS Regions.]
     - B. CloudEndure Migration.
-    - C. AWS Backup.
+    - C. AWS Backup. [centralized backup management, but does not create a standby environment for disaster recovery.]
     - D. AWS Glue.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -180,10 +180,10 @@ layout: exam
     </details>
 
 18. Which statement is true in relation to the security of Amazon EC2?
-    - A. You should use instance store volumes to store login data.
+    - A. You should use instance store volumes to store login data. [Instance store is ephemeral]
     - B. You should regularly patch the operating system and applications on your EC2 instances.
-    - C. You should deploy critical components of your application in the Availability Zone that you trust.
-    - D. You can track all API calls using Amazon Athena.
+    - C. You should deploy critical components of your application in the Availability Zone that you trust.[deploy app across multipli az]
+    - D. You can track all API calls using Amazon Athena.[athena is for query logs in s3]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B
@@ -231,9 +231,9 @@ layout: exam
 
 23. Which of the following are factors should be considered for Amazon EBS pricing? (Choose TWO)
     - A. The size of volumes provisioned per month.
-    - B. The compute capacity you consume.
+    - B. The compute capacity you consume.[applies to ec2]
     - C. The amount of data you have stored in snapshots.
-    - D. The compute time you consume.
+    - D. The compute time you consume.[applies to ec2]
     - E. The number of Snowball storage devices you request.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -272,9 +272,9 @@ layout: exam
     </details>
 
 27. Which of the following is an available option when purchasing Amazon EC2 instances?
-    - A. The ability to bid to get the lowest possible prices.
-    - B. The ability to register EC2 instances to get volume discounts on every hour the instances are running.
-    - C. The ability to buy Dedicated Instances for up to 90% discount.
+    - A. The ability to bid to get the lowest possible prices.[describe spot instance not general]
+    - B. The ability to register EC2 instances to get volume discounts on every hour the instances are running. [no such option ]
+    - C. The ability to buy Dedicated Instances for up to 90% discount.[dedicated are not for cost savings they are for compilance and isolation]
     - D. The ability to pay upfront to get lower hourly costs.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -282,10 +282,10 @@ layout: exam
     </details>
 
 28. What does the term “Economies of scale” mean?
-    - A. It means that you save more when you consume more.
-    - B. It means as more time passes using AWS, you pay more for its services.
+    - A. It means that you save more when you consume more.[thats more of volume discount]
+    - B. It means as more time passes using AWS, you pay more for its services. [aws reduces prices over the time]
     - C. It means that AWS will continuously lower costs as it grows.
-    - D. It means that you have the ability to pay as you go.
+    - D. It means that you have the ability to pay as you go.[general aws model]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: C
@@ -302,9 +302,9 @@ layout: exam
     </details>
 
 30. Which of the below options is true of Amazon VPC?
-    - A. Amazon VPC allows customers to control user interactions with all other AWS resources.
+    - A. Amazon VPC allows customers to control user interactions with all other AWS resources. [vpc controls networking not interactions]
     - B. AWS Customers have complete control over their Amazon VPC virtual networking environment.
-    - C. AWS is responsible for all the management and configuration details of Amazon VPC.
+    - C. AWS is responsible for all the management and configuration details of Amazon VPC.[aws provides infra rest configure is our duty]
     - D. Amazon VPC helps customers to review their AWS architecture and adopt best practices.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -312,10 +312,10 @@ layout: exam
     </details>
 
 31. Which tool can a non-AWS customer use to compare the cost of on-premises environment resources to AWS?
-    - A. AWS Cost Explorer.
+    - A. AWS Cost Explorer.[visualize and analyze AWS spending]
     - B. AWS Pricing Calculator.
     - C. AWS Budgets.
-    - D. AWS TCO Calculator.
+    - D. AWS TCO Calculator.[AWS TCO Calculator is specifically designed for non-AWS customers to estimate and compare the cost of running workloads on-premises versus on AWS.]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: D
@@ -345,7 +345,7 @@ layout: exam
 34. An organization uses a hybrid cloud architecture to run their business. Which AWS service enables them to deploy their applications to any AWS or on-premises server?
     - A. Amazon Kinesis.
     - B. Amazon QuickSight.
-    - C. AWS CodeDeploy.
+    - C. AWS CodeDeploy.[deployment service that automates application deployments]
     - D. Amazon Athena.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -353,11 +353,11 @@ layout: exam
     </details>
 
 35. Select the services that are server-based: (Choose TWO)
-    - A. Amazon RDS.
-    - B. Amazon DynamoDB.
-    - C. AWS Lambda.
-    - D. AWS Fargate.
-    - E. Amazon EMR.
+    - A. Amazon RDS.[server-based managed relational database service]
+    - B. Amazon DynamoDB.[serverless] 
+    - C. AWS Lambda.[serverless]
+    - D. AWS Fargate.[serverless]
+    - E. Amazon EMR. [server-based big data processing service that uses clusters of EC2]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A, E
@@ -367,7 +367,7 @@ layout: exam
     - A. Testing your application’s response time from different locations.
     - B. Testing your network to find security vulnerabilities that an attacker could exploit.
     - C. Testing your instances to check for the unhealthy ones.
-    - D. Testing your software for bugs and errors.
+    - D. Testing your software for bugs and errors.[Q/A Testing]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B
@@ -387,7 +387,7 @@ layout: exam
 38. Your CTO has asked you to contact AWS support using the chat feature to ask for guidance related to EBS. However, when you open the AWS support center you can't see a way to contact support via Chat. What should you do?
     - A. There is no chat feature in AWS support.
     - B. The chat feature is available for all plans for an additional fee, but you have to request it first.
-    - C. At a minimum, upgrade to Business support plan.
+    - C. At a minimum, upgrade to Business support plan.{aws support chat only for business and enterprise level]
     - D. Upgrade from the Basic Support plan to Developer Support.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -397,7 +397,7 @@ layout: exam
 39. A developer wants to quickly deploy and manage his application in the AWS Cloud, but he doesn’t have any experience with cloud computing. Which of the following AWS services would help the developer achieve his goal?
     - A. AWS Fargate.
     - B. AWS Batch.
-    - C. Amazon Personalize.
+    - C. Amazon Personalize.[ML service for building recommendation systems]
     - D. AWS Elastic Beanstalk.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -415,9 +415,9 @@ layout: exam
     </details>
 
 41. For Amazon RDS databases, what does AWS perform on your behalf? (Choose TWO)
-    - A. Database setup.
+    - A. Database setup. [automates provisioning, configuration, and setup of the database engine.]
     - B. Network traffic protection.
-    - C. Management of the operating system.
+    - C. Management of the operating system.[AWS patches & maintains OS]
     - D. Access management.
     - E. Management of firewall rules.
 
@@ -468,8 +468,8 @@ layout: exam
 46. Which service can you use to route traffic to the endpoint that provides the best application performance for your users worldwide?
     - A. AWS Global Accelerator.
     - B. AWS Data Pipeline.
-    - C. AWS DAX Accelerator.
-    - D. AWS Transfer Acceleration.
+    - C. AWS DAX Accelerator.[dynamo db caching service]
+    - D. AWS Transfer Acceleration.[Speeds up uploads to Amazon S3 using CloudFront’s edge location]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A
