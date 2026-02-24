@@ -5,8 +5,8 @@ layout: exam
 # Practice Exam 5
 
 1. A company is using EC2 Instances to run their e-commerce site on the AWS platform. If the site becomes unavailable, the company will lose a significant amount of money for each minute the site is unavailable. Which design principle should the company use to minimize the risk of an outage?
-    - A. Least Privilege.
-    - B. Pilot Light.
+    - A. Least Privilege.[important for security]
+    - B. Pilot Light. [ Disaster recovery strategy where a minimal environment is always running, but for recovery]
     - C. Fault Tolerance.
     - D. Multi-threading.
 
@@ -15,7 +15,7 @@ layout: exam
     </details>
 
 2. You decide to buy a reserved instance for a term of one year. Which option provides the largest total discount?
-    - A. All up-front reservation.
+    - A. All up-front reservation. [Lrgest Discount]
     - B. All reserved instance payment options provide the same discount level.
     - C. Partial up-front reservation.
     - D. No up-front reservation.
@@ -35,7 +35,7 @@ layout: exam
       Correct answer: A, C
     </details>
 
-4. An AWS customer has used one Amazon Linux instance for 2 hours, 5 minutes and 9 seconds, and one CentOS instance for 4 hours, 23 minutes and 7 seconds. How much time will the customer be billed for?
+4. An AWS customer has used one Amazon Linux instance for 2 hours, 5 minutes and 9 seconds, and one CentOS instance for 4 hours, 23 minutes and 7 seconds. How much time will the customer be billed for? [recheck]
     - A. 3 hours for the Linux instance and 5 hours for the CentOS instance.
     - B. 2 hours, 5 minutes and 9 seconds for the Linux instance and 4 hours, 23 minutes and 7 seconds for the CentOS instance.
     - C. 2 hours, 5 minutes and 9 seconds for the Linux instance and 5 hours for the CentOS instance.
@@ -51,8 +51,8 @@ layout: exam
 
 5. What is the AWS Support feature that allows customers to manage support cases programmatically?
     - A. AWS Trusted Advisor.
-    - B. AWS Operations Support.
-    - C. AWS Support API.
+    - B. AWS Operations Support.[not an aws service]
+    - C. AWS Support API. [can create, update, and resolve support cases using API calls]
     - D. AWS Personal Health Dashboard.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -71,8 +71,8 @@ layout: exam
     </details>
 
 7. Which of the following are types of AWS Identity and Access Management (IAM) identities? (Choose TWO)
-    - A. AWS Resource Groups.
-    - B. IAM Policies.
+    - A. AWS Resource Groups. [way to organize and manage AWS resources]
+    - B. IAM Policies.[Define permissions, but they are attached to identities (users, groups, roles)]
     - C. IAM Roles.
     - D. IAM Users.
     - E. AWS Organizations.
@@ -82,10 +82,10 @@ layout: exam
     </details>
 
 8. Which of the following Amazon RDS features facilitates offloading of database read activity?
-    - A. Database Snapshots.
-    - B. Multi-AZ Deployments.
+    - A. Database Snapshots.[Used for backups and restoring database]
+    - B. Multi-AZ Deployments.[Provide high availability and failover support, but they don’t offload reads]
     - C. Automated Backups.
-    - D. Read Replicas.
+    - D. Read Replicas. 
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: D
@@ -93,9 +93,9 @@ layout: exam
 
 9. How does AWS notify customers about security and privacy events pertaining to AWS services?
     - A. Using the AWS ACM service.
-    - B. Using Security Bulletins.
+    - B. Using Security Bulletins. [official channel AWS uses to notify customers about security and privacy events related to AWS services.]
     - C. Using the AWS Management Console.
-    - D. Using Compliance Resources.
+    - D. Using Compliance Resources. [Provide documentation and certifications for compliance]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B
@@ -112,10 +112,10 @@ layout: exam
     </details>
 
 11. A company has a web application that is hosted on a single EC2 instance and is approaching 100 percent CPU Utilization during peak loads. Rather than scaling the server vertically, the company has decided to deploy three Amazon EC2 instances in parallel and to distribute traffic across the three servers. What AWS Service should the company use to distribute the traffic evenly?
-    - A. AWS Global Accelerator.
+    - A. AWS Global Accelerator. [Improves performance by routing traffic through AWS’s global network, but it doesn’t distribute traffic across EC2 instances within a region]
     - B. AWS Application Load Balancer (ALB).
-    - C. Amazon CloudFront.
-    - D. Transit VPC.
+    - C. Amazon CloudFront. [ caches content closer to users. It reduces latency ]
+    - D. Transit VPC. [connecting multiple vpc]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B
@@ -124,7 +124,7 @@ layout: exam
 12. Which of the following approaches will help you eliminate human error and automate the process of creating and updating your AWS environment?
     - A. Use Software test automation tools.
     - B. Use AWS CodeDeploy to build and automate your AWS environment.
-    - C. Use code to provision and operate your AWS infrastructure.
+    - C. Use code to provision and operate your AWS infrastructure. [IAC - Cloudformation, CDK, Terraform]
     - D. Migrate all of your applications to a dedicated host.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -152,11 +152,11 @@ layout: exam
     </details>
 
 15. Which of the following factors should be considered when determining the region in which AWS Resources will be deployed? (Choose TWO)
-    - A. The AWS Region’s security level.
+    - A. The AWS Region’s security level.[All AWS Regions follow high AWS security standards.]
     - B. Data sovereignty.
     - C. Cost.
-    - D. The planned number of VPCs.
-    - E. Geographic proximity to the company's location.
+    - D. The planned number of VPCs.[Number of VPCs does not determine region choice you can create multiple vpc]
+    - E. Geographic proximity to the company's location. [region selection is based on customer location, not company office location.]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B, C
@@ -204,8 +204,8 @@ layout: exam
     </details>
 
 20. Which of the following is a type of MFA device that customers can use to protect their AWS resources?
-    - A. AWS CloudHSM.
-    - B. U2F Security Key.
+    - A. AWS CloudHSM. ( A hardware security module for managing encryption keys)
+    - B. U2F Security Key. [virtual mfa(mobile), hardware mfs(physical tokens), sms mfa)
     - C. AWS Access Keys.
     - D. AWS Key Pair.
 
@@ -225,9 +225,9 @@ layout: exam
 
 22. Which of the following is NOT a factor when estimating the costs of Amazon EC2? (Choose TWO)
     - A. The amount of time the instances will be running.
-    - B. Number of security groups.
+    - B. Number of security groups.( sg are free)
     - C. Allocated Elastic IP Addresses.
-    - D. Number of Hosted Zones.
+    - D. Number of Hosted Zones. (hosted zones are part of route 53)
     - E. Number of instances.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -236,7 +236,7 @@ layout: exam
 
 23. Which AWS Service helps enterprises extend their on-premises storage to AWS in a cost-effective manner?
     - A. AWS Data Pipeline.
-    - B. AWS Storage Gateway.
+    - B. AWS Storage Gateway.[hybrid cloud storage service that enables enterprises to extend their on-premises storage to AWS in a cost-effective way]
     - C. Amazon Aurora.
     - D. Amazon EFS.
 
@@ -246,7 +246,7 @@ layout: exam
 
 24. A company is building an online cloud storage platform. They need a storage service that can scale capacity automatically, while minimizing cost. Which AWS storage service should the company use to meet these requirements?
     - A. Amazon Simple Storage Service.
-    - B. Amazon Elastic Block Store.
+    - B. Amazon Elastic Block Store. [It doesn’t scale automatically and is more expensive for large-scale storage.]
     - C. Amazon Elastic Container Service.
     - D. AWS Storage Gateway.
 
@@ -258,7 +258,7 @@ layout: exam
     - A. EBS and S3 are accessible only to the root account owner.
     - B. The systems administrator must contact AWS Support first to activate his new IAM account.
     - C. There is not enough space in S3 to store the snapshots.
-    - D. There is a non-explicit deny to all new users.
+    - D. There is a non-explicit deny to all new users. [By default, new IAM users have no permissions, AWS IAM follows the principle of least privilege: unless you explicitly attach policies granting access, the user cannot perform any actions.]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: D
@@ -276,19 +276,20 @@ layout: exam
 
 27. Which of the below options is true of Amazon Cloud Directory?
     - A. Amazon Cloud Directory allows the organization of hierarchies of data across multiple dimensions.
-    - B. Amazon Cloud Directory enables the analysis of video and data streams in real time.
-    - C. Amazon Cloud Directory allows users to access AWS with their existing Active Directory credentials.
-    - D. Amazon Cloud Directory allows for registration and management of domain names.
+    - B. Amazon Cloud Directory enables the analysis of video and data streams in real time. [Amazon Kinesis]
+    - C. Amazon Cloud Directory allows users to access AWS with their existing Active Directory credentials.[That’s AWS Directory Service (AD Connector or Managed Microsoft AD)]
+    - D. Amazon Cloud Directory allows for registration and management of domain names.[Route 53]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A
     </details>
 
 28. A user has opened a "Production System Down" support case to get help from AWS Support after a production system disruption. What is the expected response time for this type of support case?
-    - A. 12 hours.
-    - B. 15 minutes.
-    - C. 24 hours.
-    - D. One hour.
+    - A. 12 hours.(system impaired)
+    - B. 15 minutes. (Business-critical system down)
+    - C. 24 hours.(general guidance)
+    - D. One hour.(production system down)
+    - E. four hours (Production system impaired)
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: D
@@ -296,8 +297,8 @@ layout: exam
 
 29. Which of the below options is a best practice for making your application on AWS highly available?
     - A. Deploy the application to at least two Availability Zones.
-    - B. Use Elastic Load Balancing (ELB) across multiple AWS Regions.
-    - C. Deploy the application code on at least two servers in the same Availability Zone.
+    - B. Use Elastic Load Balancing (ELB) across multiple AWS Regions. [ELB works within a single region across multiple AZs. For multi-region deployments, you’d use Route 53 or Global Accelerator]
+    - C. Deploy the application code on at least two servers in the same Availability Zone.[rotects against a single server failure, but not against an AZ outage.]
     - D. Rewrite the application code to handle all incoming requests.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -327,10 +328,10 @@ layout: exam
 
 32. Which of the following AWS offerings are serverless services? (Choose TWO)
     - A. Amazon EC2.
-    - B. AWS Lambda.
-    - C. Amazon DynamoDB.
-    - D. Amazon EMR.
-    - E. Amazon RDS.
+    - B. AWS Lambda. [fully managed serverless compute service.]
+    - C. Amazon DynamoDB. [fully managed serverless NoSQL database]
+    - D. Amazon EMR. [still provision clusters]
+    - E. Amazon RDS. [only aurora is serverless]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B, C
@@ -357,9 +358,9 @@ layout: exam
     </details>
 
 35. A customer is seeking to store objects in their AWS environment and to make those objects downloadable over the internet. Which AWS Service can be used to accomplish this?
-    - A. Amazon EBS.
-    - B. Amazon EFS.
-    - C. Amazon S3.
+    - A. Amazon EBS. [Block storage for EC2 instances; not accessible directly over the internet.]
+    - B. Amazon EFS. [Elastic File System for EC2; provides shared file storage,]
+    - C. Amazon S3. [provides scalable object storage and allows you to make those objects publicly accessible and downloadable over the internet]
     - D. Amazon Instance Store.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -367,13 +368,13 @@ layout: exam
     </details>
 
 36. Which of the following services can be used to monitor the HTTP and HTTPS requests that are forwarded to Amazon CloudFront?
-    - A. AWS WAF.
+    - A. AWS WAF. [Monitor HTTP and HTTPS requests, incoming traffic]
     - B. Amazon CloudWatch.
     - C. AWS Cloud9.
     - D. AWS CloudTrail.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
-      Correct answer: B
+      Correct answer: A
     </details>
 
 37. A company is migrating a web application to AWS. The application’s compute capacity is continually utilized throughout the year. Which of the below options offers the company the most cost-effective solution?
@@ -408,7 +409,7 @@ layout: exam
 
 40. Which of the following will help AWS customers save on costs when migrating their workloads to AWS?
     - A. Use servers instead of managed services.
-    - B. Use existing third-party software licenses on AWS.
+    - B. Use existing third-party software licenses on AWS. [AWS supports BYOL (Bring Your Own License)]
     - C. Migrate production workloads to AWS edge locations instead of AWS Regions.
     - D. Use AWS Outposts to run all workloads in a cost-optimized environment.
 
@@ -438,9 +439,9 @@ layout: exam
     </details>
 
 43. According to best practices, which of the below options is best suited for processing a large number of binary files?
-    - A. Vertically scaling EC2 instances.
-    - B. Running RDS instances in parallel.
-    - C. Vertically scaling RDS instances.
+    - A. Vertically scaling EC2 instances. [limited by instance size ]
+    - B. Running RDS instances in parallel.[RDS is for relational databases, not for binary file processing.]
+    - C. Vertically scaling RDS instances. [RDS is for relational databases, not for binary file processing.]
     - D. Running EC2 instances in parallel.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -448,19 +449,19 @@ layout: exam
     </details>
 
 44. A company is planning to use Amazon S3 and Amazon CloudFront to distribute its video courses globally. What tool can the company use to estimate the costs of these services?
-    - A. AWS Cost Explorer.
-    - B. AWS Pricing Calculator.
-    - C. AWS Budgets.
-    - D. AWS Cost & Usage Report.
+    - A. AWS Cost Explorer. [Used for analyzing existing costs and usage]
+    - B. AWS Pricing Calculator. [ official tool for estimating the costs of AWS services before deployment.]
+    - C. AWS Budgets.[ Helps track and manage costs against defined budgets, but not for estimating new workloads.]
+    - D. AWS Cost & Usage Report.[rovides detailed billing data for past usage]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B
     </details>
 
 45. What should you do if you see resources, which you don’t remember creating, in the AWS Management Console? (Choose TWO)
-    - A. Stop all running services and open an investigation.
-    - B. Give your root account password to AWS Support so that they can assist in troubleshooting and securing the account.
-    - C. Check the AWS CloudTrail logs and delete all IAM users that have access to your resources.
+    - A. Stop all running services and open an investigation.[Stopping everything is disruptive and not recommended;]
+    - B. Give your root account password to AWS Support so that they can assist in troubleshooting and securing the account.[Never share your root account password with anyone, including AWS Support.]
+    - C. Check the AWS CloudTrail logs and delete all IAM users that have access to your resources.[deleting all IAM users is excessive and could lock out legitimate users.]
     - D. Open an investigation and delete any potentially compromised IAM users.
     - E. Change your AWS root account password and the passwords of any IAM users.
 
@@ -500,7 +501,7 @@ layout: exam
 
 49. Which of the following are true regarding the languages that are supported on AWS Lambda? (Choose TWO)
     - A. Lambda only supports Python and Node.js, but third party plugins are available to convert code in other languages to these formats.
-    - B. Lambda natively supports a number of programming languages such as Node.js, Python, and Java.
+    - B. Lambda natively supports a number of programming languages such as Node.js, Python, and Java.[ Node.js, Python, Java, Go, Ruby, .NET Core, and custom runtimes.]
     - C. Lambda is AWS’ proprietary programming language for microservices.
     - D. Lambda doesn’t support programming languages; it is a serverless compute service.
     - E. Lambda can support any programming language using an API.
