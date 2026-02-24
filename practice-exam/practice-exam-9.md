@@ -6,6 +6,7 @@ layout: exam
 
 1. An administrator needs to rapidly deploy a popular IT solution and start using it immediately. Where can the administrator find assistance?
     - A. AWS Well-Architected Framework documentation.
+      [Provides design principles and best practices, but it’s guidance only, not a deployment tool.]
     - B. Amazon CloudFront.
     - C. AWS CodeCommit.
     - D. AWS Quick Start reference deployments.
@@ -18,6 +19,7 @@ layout: exam
     - A. It simplifies relational database administration tasks.
     - B. It provides 99.99999999999% reliability and durability.
     - C. It automatically scales databases for loads.
+      [scaling requires manual configuration or Aurora’s autoscaling.]
     - D. It enables users to dynamically adjust CPU and RAM resources.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -37,8 +39,10 @@ layout: exam
 4. A user is planning to launch two additional Amazon EC2 instances to increase availability. Which action should the user take?
     - A. Launch the instances across multiple Availability Zones in a single AWS Region.
     - B. Launch the instances as EC2 Reserved Instances in the same AWS Region and the same Availability Zone.
+      [Reserved Instances are a pricing model, not an availability strategy]
     - C. Launch the instances in multiple AWS Regions but in the same Availability Zone.
     - D. Launch the instances as EC2 Spot Instances in the same AWS Region but in different Availability Zones.
+      [Spot Instances are cost-saving but can be interrupted anytime, making them unsuitable for guaranteed availability.]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A
@@ -76,9 +80,12 @@ layout: exam
 
 8. Which task is AWS responsible for in the shared responsibility model for security and compliance?
     - A. Granting access to individuals and services.
+      [Customer responsibility via IAM.]
     - B. Encrypting data in transit.
+      [Customer responsibility (though AWS provides tools like TLS, KMS).]
     - C. Updating Amazon EC2 host firmware.
     - D. Updating operating systems.
+      [Customer responsibility; AWS only manages the underlying infrastructure.]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: C
@@ -198,10 +205,10 @@ layout: exam
 
 20. Which of the following are categories of AWS Trusted Advisor? (Select TWO)
     - A. Fault Tolerance.
-    - B. Instance Usage.
-    - C. Infrastructure.
-    - D. Performance.
-    - E. Storage Capacity.
+    - B. Instance Usage.   [Cost Optimization]
+    - C. Infrastructure. [ to broad]
+    - D. Performance
+    - E. Storage Capacity.   [Cost Optimization and Performance]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A, D
@@ -259,7 +266,8 @@ layout: exam
     </details>
 
 26. Which AWS feature allows a company to take advantage of usage tiers for services across multiple member accounts?
-    - A. Service control policies (SCPs).
+    - A. Service control policies (SCPs)
+    [manage permissions across accounts, not billing]
     - B. Consolidated billing.
     - C. All Upfront Reserved Instances.
     - D. AWS Cost Explorer.
@@ -335,6 +343,7 @@ layout: exam
     - B. AWS CloudTrail.
     - C. AWS Config.
     - D. AWS Health.
+     [Provides personalized alerts and notifications about AWS service health]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B
@@ -373,10 +382,13 @@ layout: exam
 
 37. What are the benefits of using the AWS Cloud for companies with customers in many countries around the world (Select TWO)
     - A. Companies can deploy applications in multiple AWS Regions to reduce latency.
-    - B. Amazon Translate automatically translates third-party website interfaces into multiple languages.
+    - B. Amazon Translate automatically translates third-party website interfaces into multiple languages
+      [Provides language translation, but not a latency or global availability solution.]
     - C. Amazon CloudFront has multiple edge locations around the world to reduce latency.
     - D. Amazon Comprehend allows users to build applications that can respond to user requests in many languages.
+      [Natural language processing service, not related to reducing latency.]
     - E. Elastic Load Balancing can distribute application web traffic to multiple AWS Regions around the world which reduces latency.
+      [ELB works within a Region across multiple AZs, not across multiple Regions.]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A, C
@@ -425,9 +437,11 @@ layout: exam
 
 42. What is the benefit of using AWS managed services, such as Amazon ElastiCache and Amazon Relational Database Service (Amazon RDS)?
     - A. They require the customer to monitor and replace failing instances.
+      [AWS manages this for managed services.]
     - B. They have better performance than customer-managed services.
     - C. They simplify patching and updating underlying OSs.
     - D. They do not require the customer to optimize instance type or size selections.
+      [Customers still need to choose appropriate instance types for workloads.]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct Answer: C
@@ -441,8 +455,11 @@ layout: exam
     - A. Amazon Route 53.
     - B. Virtual Private Gateway.
     - C. Classic Load Balancer.
+      [works within aws]
     - D. Auto Scaling.
+      [scales aws resource automatically doesnt integrate with on premises]
     - E. Amazon CloudWatch default metrics.
+      [metric withing AWS]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A, B
