@@ -18,7 +18,9 @@ layout: exam
     - A. AWS Trusted Advisor.
     - B. AWS Online Tech Talks.
     - C. AWS Blog.
+      [Provides written articles and updates, not instructor-led.]
     - D. AWS Forums.
+      [Community-driven Q&A, not structured instructor-led training.]
     - E. AWS Classroom Training.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -27,6 +29,7 @@ layout: exam
 
 3. Which of the following will enhance the security of access to the AWS Management Console’? (Select TWO)
     - A. AWS Secrets Manager.
+      [managing secrets (like API keys, DB credentials]
     - B. AWS Certificate Manager.
     - C. AWS Multi-Factor Authentication (AWS MFA).
     - D. Security groups.
@@ -60,9 +63,12 @@ layout: exam
 6. Which of the following are advantages of AWS consolidated billing? (Select TWO)
     - A. The ability to receive one bill for multiple accounts.
     - B. Service limits increasing by default in all accounts.
+      [ Limits don’t automatically increase; you must request changes per account.]
     - C. A fixed discount on the monthly bill.
+      [No fixed discount; discounts depend on pooled usage tiers.]
     - D. Potential volume discounts, as usage in all accounts is combined.
     - E. The automatic extension of the master account’s AWS support plan to all accounts.
+      [ Support plans are purchased separately per account, not automatically extended.]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A, D
@@ -71,9 +77,12 @@ layout: exam
 7. Which of the following common IT tasks can AWS cover to free up company IT resources? (Select TWO)
     - A. Patching databases software.
     - B. Testing application releases.
+      [customer’s responsibility.]
     - C. Backing up databases.
     - D. Creating database schema.
+      [customer’s responsibility.]
     - E. Running penetration tests.
+      [customer’s responsibility.]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A, C
@@ -121,9 +130,12 @@ layout: exam
 
 12. What AWS team assists customers with accelerating cloud adoption through paid engagements in any of several specialty practice areas?
     - A. AWS Enterprise Support.
+      [technical support]
     - B. AWS Solutions Architects.
+      [advise and design solution]
     - C. AWS Professional Services.
     - D. AWS Account Managers.
+      [focus on customer relationship and account growth]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: C
@@ -151,10 +163,13 @@ layout: exam
 
 15. How does AWS Trusted Advisor provide guidance to users of the AWS Cloud? (Select TWO)
     - A. It identifies software vulnerabilities in applications running on AWS.
+      [Trusted Advisor doesn’t scan application code]
     - B. It provides a list of cost optimization recommendations based on current AWS usage.
     - C. It detects potential security vulnerabilities caused by permissions settings on account resources.
     - D. It automatically corrects potential security issues caused by permissions settings on account resources.
+      [It provides recommendations, but customers must implement changes.]
     - E. It provides proactive alerting whenever an Amazon EC2 instance has been compromised.
+      [AWS Guarduty]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B, C
@@ -192,10 +207,12 @@ layout: exam
 
 19. Which AWS service provides a simple and scalable shared file storage solution for use with Linux-based AWS and on-premises servers?
     - A. Amazon S3.
+      [object storage]
     - B. Amazon Glacier.
     - C. Amazon EBS.
+      [block storage single ec2 attached]
     - D. Amazon EFS.
-
+[and Amazon FSx for Windows file server]
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: D
     </details>
@@ -242,10 +259,13 @@ layout: exam
     </details>
 
 24. Which services are parts of the AWS serverless platform?
-    - A. Amazon EC2, Amazon S3, Amazon Athena.
+    - A. Amazon EC2 , Amazon S3, Amazon Athena.
+      [ec2 not serverless rest are]
     - B. Amazon Kinesis, Amazon SQS, Amazon EMR.
+      [kin and sqs are serverless but emr  is cluster serveic]
     - C. AWS Step Functions, Amazon DynamoDB, Amazon SNS.
     - D. Amazon Athena, Amazon Cognito, Amazon EC2.
+      [ec2 isnt rest is]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: C
@@ -335,7 +355,9 @@ layout: exam
 33. When performing a cost analysis that supports physical isolation of a customer workload, which compute hosting model should be accounted for in the Total Cost of Ownership (TCO)?
     - A. Dedicated Hosts
     - B. Reserved Instances
+      [no gurantee of isolation]
     - C. On-Demand Instances
+      [flexible but no physical isolation]
     - D. No Upfront Reserved Instances
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -363,9 +385,9 @@ layout: exam
     </details>
 
 36. Which Amazon EC2 instance pricing model can provide discounts of up to 90%?
-    - A. Reserved Instances.
-    - B. On-Demand.
-    - C. Dedicated Hosts.
+    - A. Reserved Instances. (72%)
+    - B. On-Demand.    (pay as you go)
+    - C. Dedicated Hosts.  (expensive for physical isolation/compilance/licensing)
     - D. Spot Instances.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -387,8 +409,10 @@ layout: exam
     - A. Hosting applications.
     - B. Delivering content closer to users.
     - C. Running NoSQL database caching services.
+      [aws elasticache]
     - D. Reducing traffic on the server by caching responses.
     - E. Sending notification messages to end users.
+      [aws sns]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B, D
@@ -439,6 +463,7 @@ layout: exam
     - B. Use a hybrid cloud computing deployment model within the geographic area.
     - C. Deploy applications across multiple AWS Regions.
     - D. Store application artifacts using AWS Artifact and replicate them across multiple AWS Regions.
+      [AWS Artifact is a compliance and documentation service]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: C
@@ -478,7 +503,9 @@ layout: exam
 47. Which AWS service provides alerts when an AWS event may impact a company’s AWS resources?
     - A. AWS Personal Health Dashboard.
     - B. AWS Service Health Dashboard.
+      [Shows the overall status of AWS services globally, but not personalized to your account or resources.]
     - C. AWS Trusted Advisor.
+      [best practice recommendations (cost, performance, security]
     - D. AWS Infrastructure Event Management.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
