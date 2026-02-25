@@ -28,7 +28,9 @@ layout: exam
 3. Which of the following are features of Amazon CloudWatch Logs? (Select TWO)
     - A. Summaries by Amazon Simple Notification Service (Amazon SNS).
     - B. Free Amazon Elasticsearch Service analytics.
+      [Integration with Amazon OpenSearch Service (formerly Elasticsearch) is possible, but it’s not free. ]
     - C. Provided at no charge.
+      [CloudWatch Logs is not free]
     - D. Real-time monitoring.
     - E. Adjustable retention.
 
@@ -60,6 +62,7 @@ layout: exam
     - A. Patching underlying infrastructure
     - B. Physical security
     - C. Patching Amazon EC2 instances
+      [Customer’s responsibility]
     - D. Patching network infrastructure
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -70,6 +73,7 @@ layout: exam
     - A. It is solely the responsibility of the customer.
     - B. It is solely the responsibility of AWS.
     - C. It is shared between AWS and the customer.
+      [AWS manages infrastructure configurations and customers configure their own resources(os,sg,iam etc)
     - D. It is not part of the AWS shared responsibility model.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -78,8 +82,11 @@ layout: exam
 
 8. Which security service automatically recognizes and classifies sensitive data or intellectual property on AWS?
     - A. Amazon GuardDuty.
+      [ Threat detection service that monitors for malicious activity and unauthorized behavior.]
     - B. Amazon Macie.
+      [ Uses ML to discover, classify, and protect sensitive data such as PII ]
     - C. Amazon Inspector.
+      [Automated security assessment service that checks for vulnerabilities ]
     - D. AWS Shield.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -98,9 +105,11 @@ layout: exam
     </details>
 
 10. Under the shared responsibility model, which of the following tasks are the responsibility of the AWS customer? (Select TWO)
-    - A. Ensuring that application data is encrypted at rest.
+    - A. Ensuring that application data is encrypted at rest
+    [Customer responsibility. ((e.g., using KMS, SSE, or client-side encryption).)
     - B. Ensuring that AWS NTP servers are set to the correct time.
     - C. Ensuring that users have received security training in the use of AWS services.
+      [Customer responsibility. Training your staff]
     - D. Ensuring that access to data centers is restricted.
     - E. Ensuring that hardware is disposed of properly.
 
@@ -192,9 +201,13 @@ layout: exam
 
 19. Which of the Reserved Instance (RI) pricing models can change the attributes of the RI as long as the exchange results in the creation of RIs of equal or greater value?
     - A. Dedicated RIs.
+      [tied to specific hardware for compliance/isolation needs]
     - B. Scheduled RIs.
+      [reserved for specific recurring time windows]
     - C. Convertible RIs.
+      [Less Discount than Standard but high flexible
     - D. Standard RIs.
+      [Biggest Discount but no flexible]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: C
@@ -213,6 +226,7 @@ layout: exam
 21. When should a company consider using Amazon EC2 Spot Instances? (Select TWO)
     - A. For non-production applications.
     - B. For stateful workloads.
+      [stateful workloads like database require persistence and stabaility]
     - C. For applications that cannot have interruptions.
     - D. For fault-tolerant flexible applications.
     - E. For sensitive database applications.
@@ -227,6 +241,7 @@ layout: exam
     - C. AWS Simple Monthly Calculator.
     - D. AWS Total Cost of Ownership (TCO) Calculator.
     - E. Cost Estimator.
+      [not an aws service]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B, C, D
@@ -295,6 +310,7 @@ layout: exam
 
 29. Which of the following are characteristics of Amazon S3? (Select TWO)
     - A. A global file system.
+      [S3 is global in scope but it is not a file system; it’s object storage.]
     - B. An object store.
     - C. A local file store.
     - D. A network file system.
@@ -346,7 +362,9 @@ layout: exam
 
 34. Web servers running on Amazon EC2 access a legacy application running in a corporate data center. What term would describe this model?
     - A. Cloud-native.
+      [ Refers to applications built entirely in the cloud using cloud-native services ]
     - B. Partner network.
+      [about third-party vendors and solutions]
     - C. Hybrid architecture.
     - D. Infrastructure as a service.
 
@@ -356,6 +374,7 @@ layout: exam
 
 35. What technology enables compute capacity to adjust as loads change?
     - A. Load balancing.
+      [Distributes traffic across multiple instances, but it doesn’t adjust compute capacity itself]
     - B. Automatic failover.
     - C. Round robin.
     - D. Auto Scaling.
@@ -437,7 +456,9 @@ layout: exam
 
 43. What time-savings advantage is offered with the use of Amazon Rekognition?
     - A. Amazon Rekognition provides automatic watermarking of images.
+      [it focuses on image/video analysis.]
     - B. Amazon Rekognition provides automatic detection of objects appearing in pictures.
+      [uses machine learning to identify objects, people, text, scenes, and activities in images and videos]
     - C. Amazon Recognition provides the ability to resize millions of images automatically.
     - D. Amazon Rekognition uses Amazon Mechanical Turk to allow humans to bid on object detection jobs.
 
