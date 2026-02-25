@@ -74,6 +74,7 @@ layout: exam
     - A. Amazon EC2
     - B. Amazon Relational Database Service (Amazon RDS)
     - C. Amazon Aurora
+      [aurora is compatible with mysql and postgresql not sql server]
     - D. Amazon Redshift
     - E. Amazon S3
 
@@ -154,6 +155,7 @@ layout: exam
 1. Which services can be used across hybrid AWS Cloud architectures? (Select TWO.)
     - A. Amazon Route 53
     - B. Virtual Private Gateway
+      [Amazon VPC via VPN or AWS Direct Connect]
     - C. Classic Load Balancer
     - D. Auto Scaling
     - E. Amazon CloudWatch default metrics
@@ -322,6 +324,7 @@ layout: exam
     - A. Shared responsibility security model
     - B. Single tenancy
     - C. Elastic computing
+      [customers to scale resources up or down on demand, so they only pay for what they use]
     - D. Encryption
 
     <details markdown=1><summary markdown="span">Answer</summary>
