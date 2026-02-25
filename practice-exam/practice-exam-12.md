@@ -27,8 +27,10 @@ layout: exam
 3. What can assist in evaluating an application for migration to the cloud? (Select TWO)
     - A. AWS Trusted Advisor.
     - B. AWS Professional Services.
+      [Paid consulting engagements with AWS experts who help assess]
     - C. AWS Systems Manager.
     - D. AWS Partner Network (APN).
+      [A global community of AWS-certified partner]
     - E. AWS Secrets Manager.
 
     <details markdown=1><summary markdown='span'>Answer</summary>
@@ -131,6 +133,7 @@ layout: exam
     - A. Implementing Amazon Rekognition.
     - B. Using AWS Shield-protected resources.
     - C. Blocking access with Security Groups.
+      [inbound/outbound traffic not iam access]
     - D. Using Multi-Factor Authentication (MFA).
     - E. Enforcing password strength and expiration.
 
@@ -151,8 +154,11 @@ layout: exam
 15. Where should a company go to search software listings from independent software vendors to find, test, buy and deploy software that runs on AWS?
     - A. AWS Marketplace.
     - B. Amazon Lumberyard.
+      [A game engine for building and running games]
     - C. AWS Artifact.
+      [Provides compliance reports and documentation]
     - D. Amazon CloudSearch.
+      [managed search service for applications]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: A
@@ -180,8 +186,10 @@ layout: exam
 
 18. A company wants to migrate its applications to a VPC on AWS These applications will need to access on-premises resources. What combination of actions will enable the company to accomplish this goals? (Select TWO)
     - A. Use the AWS Service Catalog to identify a list of on-premises resources that can be migrated
+     [manage approved AWS resources]
     - B. Build a VPN connection between an on-premises device and a virtual private gateway in the new VPC
     - C. Use Amazon Athena to query data from the on-premises database servers
+      [Queries data in S3]
     - D. Connect the company’s on-premises data center to AWS using AWS Direct Connect
     - E. Leverage Amazon CloudFront to restrict access to static web content provided through the company’s on-premises web servers
 
@@ -193,7 +201,9 @@ layout: exam
     - A. Review the inbound rules for each security group in the Amazon EC2 management console to check for port 0.0.0.0/0.
     - B. Run AWS Trusted Advisor and review the findings.
     - C. Open the AWS IAM console and check the inbound rule filters for open access.
+      [IAM deals with identity and access management, not sg]
     - D. In AWS Config, create a custom rule that invokes an AWS Lambda function to review firewall rules for inbound access.
+      [complex]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B
@@ -201,10 +211,13 @@ layout: exam
 
 20. Which of the following security-related services does AWS offer? (Select TWO)
     - A. Multi-factor authentication physical tokens.
+      [AWS does not provide physical tokens directl]
     - B. AWS Trusted Advisor security checks.
     - C. Data encryption.
     - D. Automated penetration testing.
+      [Customers can request permission to perform their own penetration tests.]
     - E. Amazon S3 copyrighted content detection.
+    [No such service exists]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B, C
@@ -233,9 +246,12 @@ layout: exam
 
 23. A solution that is able to support growth in users, traffic, or data size with no drop in performance aligns with which cloud architecture principle?
     - A. Think parallel.
+      [for efficiency]
     - B. Implement elasticity.
     - C. Decouple your components.
+      [Improves resilience and flexibility,]
     - D. Design for failure.
+      [Ensures recovery from faults]
 
     <details markdown=1><summary markdown='span'>Answer</summary>
       Correct answer: B
@@ -302,7 +318,8 @@ layout: exam
     </details>
 
 30. How should a customer forecast the future costs for running a new web application?
-    - A. Amazon Aurora Backtrack.
+    - A. Amazon Aurora Backtrack
+      [lets you roll back a database to a previous point in time}
     - B. Amazon CloudWatch Billing Alarms.
     - C. AWS Simple Monthly Calculator.
     - D. AWS Cost and Usage report.
@@ -386,6 +403,7 @@ layout: exam
 
 38. Which of the following services could be used to deploy an application to servers running on-premises? (Select TWO)
     - A. AWS Elastic Beanstalk.
+      [simplifies depliyment but not on premises server]
     - B. AWS OpsWorks.
     - C. AWS CodeDeploy.
     - D. AWS Batch.
@@ -408,6 +426,7 @@ layout: exam
 40. Which AWS security service protects applications from distributed denial of service attacks with always-on detection and automatic inline mitigations?
     - A. Amazon Inspector.
     - B. AWS Web Application Firewall (AWS WAF).
+      [Protects against common web exploits (like SQL injection, XSS)]
     - C. Elastic Load Balancing (ELB).
     - D. AWS Shield.
 
