@@ -526,7 +526,9 @@ layout: exam
 33. Which of the following is an advantage of consolidated billing on AWS?
     - A. Volume pricing qualification
     - B. Shared access permissions
+    [Permissions are managed through IAM]
     - C. Multiple bills per account
+    [Consolidated billing reduces the number of bills]
     - D. Eliminates the need for tagging
 
     <details markdown=1><summary markdown="span">Answer</summary>
@@ -746,6 +748,7 @@ layout: exam
     - A. AWS manages the data stored in Amazon RDS tables.
     - B. AWS manages the maintenance of the operating system.
     - C. AWS automatically scales up instance types on demand.
+      [it does not automatically change instance types.]
     - D. AWS manages the database type.
     <details markdown=1><summary markdown="span">Answer</summary>
 
@@ -810,10 +813,13 @@ layout: exam
 
 49. Which of the following features can be configured through the Amazon Virtual Private Cloud (Amazon VPC) Dashboard? (Select TWO.)
     - A. Amazon CloudFront distributions
+      [sepreate console]
     - B. Amazon Route 53
+      [sepreate console]
     - C. Security Groups
     - D. Subnets
     - E. Elastic Load Balancing
+      [sepreate console]
 
     <details markdown=1><summary markdown="span">Answer</summary>
 
