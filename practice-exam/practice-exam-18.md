@@ -91,6 +91,7 @@ layout: exam
 
 7. A company wants to migrate its applications to a VPC on AWS. These applications will need to access on-premises resources. <br/> What combination of actions will enable the company to accomplish this goal? (Choose two.)
     - A. Use the AWS Service Catalog to identify a list of on-premises resources that can be migrated.
+      [ Used to manage approved AWS resources, not for conncetivity]
     - B. Build a VPN connection between an on-premises device and a virtual private gateway in the new VPC.
     - C. Use Amazon Athena to query data from the on-premises database servers.
     - D. Connect the company's on-premises data center to AWS using AWS Direct Connect.
@@ -194,7 +195,9 @@ layout: exam
 13. Which of the following is an AWS database service?
     - A. Amazon Redshift
     - B. Amazon Elastic Block Store (Amazon EBS)
+      [Storage service for EC2 instances]
     - C. Amazon S3 Glacier
+      [Archival storage service for long-term backups, not a database.]
     - D. AWS Snowball
 
     <details markdown=1><summary markdown="span">Answer</summary>
@@ -236,6 +239,7 @@ layout: exam
     - A. EC2 security groups
     - B. AWS Config
     - C. Amazon Macie
+      [ sensitive data detection]
     - D. Amazon Inspector
 
     <details markdown=1><summary markdown="span">Answer</summary>
@@ -268,8 +272,10 @@ layout: exam
 
 18. Where can users find a catalog of AWS-recognized providers of third-party security solutions?
     - A. AWS Service Catalog
+      [Used to manage approved AWS resources within an organization, not third-party providers.]
     - B. AWS Marketplace
     - C. AWS Quick Start
+      [Provides automated reference deployments for AWS solutions]
     - D. AWS CodeDeploy
 
     <details markdown=1><summary markdown="span">Answer</summary>
@@ -318,8 +324,10 @@ layout: exam
 
 21. Which security service automatically recognizes and classifies sensitive data or intellectual property on AWS?
     - A. Amazon GuardDuty
+      [ Threat detection service for malicious activity and unauthorized behavior]
     - B. Amazon Macie
     - C. Amazon Inspector
+      [Automated vulnerability assessment for EC2 and containers,]
     - D. AWS Shield
 
     <details markdown=1><summary markdown="span">Answer</summary>
