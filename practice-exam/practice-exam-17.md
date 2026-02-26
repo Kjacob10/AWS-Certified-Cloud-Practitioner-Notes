@@ -55,6 +55,7 @@ layout: exam
     - A. AWS TCO Calculator
     - B. AWS Simple Monthly Calculator
     - C. AWS Cost Explorer API
+      [Used to analyze existing AWS spending.]
     - D. AWS Budgets
 
     <details markdown=1><summary markdown="span">Answer</summary>
@@ -253,6 +254,7 @@ layout: exam
 16. Which AWS security service protects applications from distributed denial of service attacks with always-on detection and automatic inline mitigations?
     - A. Amazon Inspector
     - B. AWS Web Application Firewall (AWS WAF)
+      [SQL injection, XSS)
     - C. Elastic Load Balancing (ELB)
     - D. AWS Shield
 
@@ -569,6 +571,7 @@ layout: exam
     - B. It is solely the responsibility of AWS.
     - C. It is shared between AWS and the customer.
     - D. It is not part of the AWS shared responsibility model.
+    - Physical infrastructure → AWS      -Applications/data/settings → Customer    - Configuration management → Shared
 
     <details markdown=1><summary markdown="span">Answer</summary>
 
@@ -632,7 +635,9 @@ layout: exam
     - B. AWS manages all security in the cloud.
     - C. Users have the ability to provision resources on demand.
     - D. Users have access to free and unlimited storage.
+      [ Storage is scalable but not free or unlimited.]
     - E. Users have control over the physical infrastructure.
+      [manages the physical infrastructure;]
 
     <details markdown=1><summary markdown="span">Answer</summary>
 
@@ -719,6 +724,7 @@ layout: exam
     - C. Amazon CloudFront has multiple edge locations around the world to reduce latency.
     - D. Amazon Comprehend allows users to build applications that can respond to user requests in many languages.
     - E. Elastic Load Balancing can distribute application web traffic to multiple AWS Regions around the world, which reduces latency.
+      [ Distributes traffic across instances within a Region]
 
     <details markdown=1><summary markdown="span">Answer</summary>
 
