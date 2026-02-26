@@ -139,9 +139,12 @@ layout: exam
 10. According to the AWS Well-Architected Framework, what change management steps should be taken to achieve reliability in the AWS Cloud? (Choose two.)
     - A. Use AWS Config to generate an inventory of AWS resources
     - B. Use service limits to prevent users from creating or making changes to AWS resources
+      [Service limits are for quota management]
     - C. Use AWS CloudTrail to record AWS API calls into an auditable log file
     - D. Use AWS Certificate Manager to whitelist approved AWS resources and services
+      [Manages SSL/TLS ]
     - E. Use Amazon GuardDuty to validate configuration changes made to AWS resources
+      [Threat detection service]
 
     <details markdown=1><summary markdown="span">Answer</summary>
 
@@ -637,7 +640,7 @@ layout: exam
 
 45. Which AWS service can be used to turn text into life-like speech?
     - A. Amazon Polly
-    - B. Amazon Transcribe
+    - B. Amazon Transcribe [Speec to Text]
     - C. Amazon Rekognition
     - D. Amazon Lex
 
