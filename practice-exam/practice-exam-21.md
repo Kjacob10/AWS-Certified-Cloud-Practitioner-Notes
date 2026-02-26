@@ -234,6 +234,7 @@ layout: exam
     - B. Use AWS VPN
     - C. Use AWS Client VPN
     - D. Use an AWS Transit Gateway
+      [networking service that acts as a hub to connect multiple Amazon VPCs and on-premises networks]
 
     <details markdown=1><summary markdown="span">Answer</summary>
 
@@ -259,7 +260,7 @@ layout: exam
 
 19. Which AWS service or feature helps restrict the AWS services, resources, and individual API actions the users and roles in each member account can access?
     - A. Amazon Cognito
-    - B. AWS Organizations
+    - B. AWS Organizations [using scp]
     - C. AWS Shield
     - D. AWS Firewall Manager
 
@@ -384,7 +385,7 @@ layout: exam
     </details>
 
 28. Which of the following are AWS compute services? (Select two.)
-    - A. Amazon Lightsail
+    - A. Amazon Lightsail [VPS]
     - B. AWS Systems Manager
     - C. AWS CloudFormation
     - D. AWS Batch
@@ -514,7 +515,9 @@ layout: exam
 
 37. Which AWS service or feature allows a user to easily scale connectivity among thousands of VPCs?
     - A. VPC peering
+      [ Connects two VPCs directly, but it doesn’t scale well.]
     - B. AWS Transit Gateway
+      [ hub-and-spoke model that allows thousands of VPCs and on-premises networks to connect through a single gateway]
     - C. AWS Direct Connect
     - D. AWS Global Accelerator
 
@@ -528,6 +531,7 @@ layout: exam
 
 38. A company needs protection from expanded distributed denial of service (DDoS) attacks on its website and assistance from AWS experts during such events. <br/> Which AWS managed service will meet these requirements?
     - A. AWS Shield Advanced
+      [Provides expanded DDoS protection beyond the standard AWS Shield service. 24/7 access to the AWS DDoS Response Team (DRT)] 
     - B. AWS Firewall Manager
     - C. AWS WAF
     - D. Amazon GuardDuty
@@ -542,6 +546,7 @@ layout: exam
 
 39. A company's application has flexible start and end times. <br/> Which Amazon EC2 pricing model will be the MOST cost-effective?
     - A. On-Demand Instances
+      [flexible but costly]
     - B. Spot Instances
     - C. Reserved Instances
     - D. Dedicated Hosts
