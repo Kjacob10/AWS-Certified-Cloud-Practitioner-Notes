@@ -241,7 +241,7 @@ layout: exam
 
     </details>
 
-14. Which AWS hybrid storage service enables on-premises applications to seamlessly use AWS Cloud storage through standard file-storage protocols?
+14. Which AWS hybrid storage service enables on-premises applications to seamlessly use AWS Cloud storage through standard file-storage protocols? (such as NFS, SMB, and iSCSI)
     - A. AWS Direct Connect
     - B. AWS Snowball
     - C. AWS Storage Gateway
