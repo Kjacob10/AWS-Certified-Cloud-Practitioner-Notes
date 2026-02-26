@@ -299,28 +299,9 @@ layout: exam
 
     </details>
 
-18. What can AWS edge locations be used for? (Select TWO.)
-    - A. Hosting applications
-    - B. Delivering content closer to users
-    - C. Running NoSQL database caching services
-    - D. Reducing traffic on the server by caching responses
-    - E. Sending notification messages to end users
-
-    <details markdown=1><summary markdown="span">Answer</summary>
-
-    Correct Answer: BD
-
-    Explanation:
-
-    - CloudFront delivers your content through a worldwide network of data centers called edge locations.
-    - When a user requests content that you're serving with CloudFront, the user is routed to the edge location that provides the lowest latency (time delay), so that content is delivered with the best possible performance.
-
-    Reference: <https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html>
-
-    </details>
-
 19. What technology enables compute capacity to adjust as loads change?
     - A. Load balancing
+      [distributes traffic across multiple resources]
     - B. Automatic failover
     - C. Round robin
     - D. Auto Scaling
@@ -344,9 +325,12 @@ layout: exam
 20. Which AWS services are defined as global instead of regional? (Select TWO.)
     - A. Amazon Route 53
     - B. Amazon EC2
+      [regional]
     - C. Amazon S3
+      [regional]
     - D. Amazon CloudFront
     - E. Amazon DynamoDB
+      [Regional)
 
     <details markdown=1><summary markdown="span">Answer</summary>
 
@@ -482,6 +466,7 @@ layout: exam
 29. Which AWS service provides alerts when an AWS event may impact a company's AWS resources?
     - A. AWS Personal Health Dashboard
     - B. AWS Service Health Dashboard
+      [ Shows the general status of AWS services across all regions, ]
     - C. AWS Trusted Advisor
     - D. AWS Infrastructure Event Management
 
@@ -517,7 +502,8 @@ layout: exam
 
     </details>
 
-31. Which of the following services falls under the responsibility of the customer to maintain operating system configuration, security patching, and networking?    - A. Amazon RDS
+31. Which of the following services falls under the responsibility of the customer to maintain operating system configuration, security patching, and networking?  
+    - A. Amazon RDS
     - B. Amazon EC2
     - C. Amazon ElastiCache
     - D. AWS Fargate
@@ -863,9 +849,13 @@ layout: exam
 
 50. Which disaster recovery scenario offers the lowest probability of down time?
     - A. Backup and restore
+      [Long hrs to days]
     - B. Pilot light
+      [Moderate hours]
     - C. Warm standby
+      [Short min to hrs]
     - D. Multi-site active-active
+      [Near zero]
 
     <details markdown=1><summary markdown="span">Answer</summary>
 
