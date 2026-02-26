@@ -242,8 +242,9 @@ layout: exam
 17. Which AWS tool is used to compare the cost of running an application on-premises to running the application in the AWS Cloud?
     - A. AWS Trusted Advisor
     - B. AWS Simple Monthly Calculator
-    - C. AWS Pricing Calculator
+    - C. AWS Pricing Calculator [Estimate AWS service costs]
     - D. Cost Explorer
+    - tco is used for comparision bt on prem and aws
 
     <details markdown=1><summary markdown="span">Answer</summary>
 
@@ -685,7 +686,7 @@ layout: exam
     - B. The source and destination S3 buckets cannot be in different AWS Regions
     - C. S3 buckets configured for cross-region replication can be owned by a single AWS account or by different accounts
     - D. The source S3 bucket owner must have the source and destination AWS Regions disabled for their account
-
+    - [for cross region replication versioning should be available anand buckets must be in different Regions]
     <details markdown=1><summary markdown="span">Answer</summary>
 
     Correct Answer: C
@@ -694,7 +695,8 @@ layout: exam
 
     </details>
 
-47. What is a user responsible for when running an application in the AWS Cloud?   - A. Managing physical hardware
+47. What is a user responsible for when running an application in the AWS Cloud?   
+    - A. Managing physical hardware
     - B. Updating the underlying hypervisor
     - C. Providing a list of users approved for data center access
     - D. Managing application software updates
