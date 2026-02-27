@@ -33,8 +33,8 @@ layout: exam
 
 3. Which AWS service can be used to provide an on-demand, cloud-based contact center?
     - A. AWS Direct Connect
-    - B. Amazon Connect
-    - C. AWS Support Center
+    - B. Amazon Connect [A fully managed, cloud-based contact center service.]
+    - C. AWS Support Center [Portal for managing AWS support cases,]
     - D. AWS Managed Services
 
     <details markdown=1><summary markdown="span">Answer</summary>
@@ -60,10 +60,10 @@ layout: exam
     </details>
 
 5. Which component must be attached to a VPC to enable inbound Internet access?
-    - A. NAT gateway
+    - A. NAT gateway [outbound Internet access from private subnets]
     - B. VPC endpoint
     - C. VPN connection
-    - D. Internet gateway
+    - D. Internet gateway [enable inbound Internet access]
 
     <details markdown=1><summary markdown="span">Answer</summary>
 
@@ -90,8 +90,10 @@ layout: exam
 7. A company has a MySQL database running on a single Amazon EC2 instance. The company now requires higher availability in the event of an outage. <br/> Which set of tasks would meet this requirement?
     - A. Add an Application Load Balancer in front of the EC2 instance
     - B. Configure EC2 Auto Recovery to move the instance to another Availability Zone
+      [Auto Recovery restarts the same instance in case of hardware failure]
     - C. Migrate to Amazon RDS and enable Multi-AZ
     - D. Enable termination protection for the EC2 instance to avoid outages
+      [ Prevents accidental deletion, but doesnt address availability]
 
     <details markdown=1><summary markdown="span">Answer</summary>
 
@@ -129,8 +131,10 @@ layout: exam
 
 10. Which of the following tasks is required to deploy a PCI-compliant workload on AWS?
     - A. Use any AWS service and implement PCI controls at the application layer
-    - B. Use an AWS service that is in-scope for PCI compliance and raise an AWS support ticket to enable PCI compliance at the application layer
+      [ Not all AWS services are PCI-compliant]
+    - B. Use an AWS service that is in-scope for PCI compliance and raise an AWS support ticket to enable PCI compliance at the application layer [ PCI compliance is not enabled by support tickets]
     - C. Use any AWS service and raise an AWS support ticket to enable PCI compliance on that service
+      [ PCI compliance is not enabled by support tickets]
     - D. Use an AWS service that is in scope for PCI compliance and apply PCI controls at the application layer
 
     <details markdown=1><summary markdown="span">Answer</summary>
@@ -143,7 +147,7 @@ layout: exam
 
 11. A company is building an application that requires the ability to send, store, and receive messages between application components. The company has another requirement to process messages in first-in, first-out (FIFO) order. <br/> Which AWS service should the company use?
     - A. AWS Step Functions
-    - B. Amazon Simple Notification Service (Amazon SNS)
+    - B. Amazon Simple Notification Service (Amazon SNS) [ pub/sub messaging service ]
     - C. Amazon Kinesis Data Streams
     - D. Amazon Simple Queue Service (Amazon SQS)
 
@@ -381,9 +385,9 @@ layout: exam
     </details>
 
 28. Which AWS service or feature requires an internet service provider (ISP) and a colocation facility to be implemented?
-    - A. AWS VPN
+    - A. AWS VPN [Uses the public Internet ]
     - B. Amazon Connect
-    - C. AWS Direct Connect
+    - C. AWS Direct Connect [uses ISP]
     - D. Internet gateway
 
     <details markdown=1><summary markdown="span">Answer</summary>
@@ -455,7 +459,8 @@ layout: exam
     - A. Amazon Simple Notification Service (Amazon SNS)
     - B. Amazon Simple Email Service (Amazon SES)
     - C. Amazon CloudWatch alerts
-    - D. Amazon Simple Queue Service (Amazon SQS)
+    - D. Amazon Simple Queue Service (Amazon SQS) 
+    [message queuing service for decoupling application components]
 
     <details markdown=1><summary markdown="span">Answer</summary>
 
@@ -496,7 +501,8 @@ layout: exam
     </details>
 
 36. A company wants to connect to AWS over a private, low-latency connection from its remote office. <br/> What is the recommended method to meet these requirements?
-    - A. Create a VPN tunnel
+    - A. Create a VPN tunnel 
+    [ Uses the public Internet, so latency and reliability are not guaranteed] 
     - B. Connect across the public internet
     - C. Use VPC peering to create a connection.
     - D. Use AWS Direct Connect.
@@ -570,6 +576,7 @@ layout: exam
     - B. Take a screenshot of each user's page in the AWS Management Console, then provide the screenshots to the auditor.
     - C. Download the IAM credential report, then provide the report to the auditor.
     - D. Download the AWS Trusted Advisor report, then provide the report to the auditor.
+      [IAM Credential Report is the simplest and most secure way to provide auditors with a full list of IAM users and their credential/access key status.]
 
     <details markdown=1><summary markdown="span">Answer</summary>
 
@@ -626,7 +633,9 @@ layout: exam
     - A. Deliver the content through Amazon CloudFront.
     - B. Store the content on Amazon S3 and enable S3 cross-region replication.
     - C. Implement a VPN across multiple AWS Regions.
+      [Provides secure connectivity]
     - D. Deliver the content through AWS PrivateLink.
+      [Used for private connectivity to AWS services, not for distributing content globally.]
 
     <details markdown=1><summary markdown="span">Answer</summary>
 
